@@ -11,7 +11,7 @@ import './App.css'
 const GET_CHANNELS_STATUS = gql`
   {
     channels(first: 10) {
-      id
+      tx
       status
     }
   }
