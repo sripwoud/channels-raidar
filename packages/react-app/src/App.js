@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { Layout } from './components/Layout'
+import { Channel } from './components/Channel'
 import logo from './ethereumLogo.png'
 import { addresses, abis } from '@project/contracts'
 import { gql } from 'apollo-boost'
@@ -37,15 +38,20 @@ export default () => {
   const { loading, error, data } = useQuery(GET_CHANNELS_STATUS)
 
   useEffect(() => {
-    if (!loading && !error && data && data.channels) {
-      console.log({ transfers: data.channels })
+    if (!loading && !error && data?.channels) {
     }
   }, [loading, error, data])
 
   return (
     <div className='App'>
       <Layout>
-        <div id='test'>Application</div>
+        {data?.channels ? (
+          data.channels.map((channel, index) => (
+            <Channel key={index} {...channel} />
+          ))
+        ) : (
+          <> </>
+        )}
       </Layout>
     </div>
   )
