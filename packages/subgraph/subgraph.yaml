@@ -1,26 +1,30 @@
 specVersion: 0.0.2
-description: Subgraph that indexes the blockchain data
-repository: https://github.com/sablierhq/sablier-subgraph
+description: Subgraph that indexes the Raiden Network Payment Channels
+repository: https://github.com/r1oga/channels-raidar
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
-    name: CeaErc20
-    network: mainnet
+    name: TokenNetwork
+    network: goerli
     source:
-      abi: erc20
-      address: "0xc1C0472c0C80bCcDC7F5D01A376Bd97a734B8815"
+      abi: tttNetwork
+      address: '0x3EA2a1fED7FdEf300DA19E97092Ce8FdF8bf66A3'
+      startBlock: 2731498
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.3
+      apiVersion: 0.0.4
       abis:
-        - name: erc20
-          file: ../contracts/src/abis/erc20.json
+        - name: tttNetwork
+          file: ../contracts/src/abis/tttNetwork.json
       entities:
-        - Token
-        - Transfer
+        - Channel
       eventHandlers:
-        - event: Transfer(indexed address,indexed address,uint256)
-          handler: handleTransfer
-      file: ./src/mappings/transfers.ts
+        - event: ChannelOpened(indexed uint256,indexed address,indexed address,uint256)
+          handler: handleChannelOpened
+        - event: ChannelClosed(indexed uint256,indexed address,indexed uint256,bytes32)
+          handler: handleChannelClosed
+        - event: ChannelSettled(indexed uint256,uint256,bytes32,uint256,bytes32)
+          handler: handleChannelSettled
+      file: ./src/mappings/channels.ts
       language: wasm/assemblyscript
