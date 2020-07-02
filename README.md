@@ -4,18 +4,14 @@ Monitoring of [Raiden Network](https://raiden.network/) Payment Channels.
 
 ## Contracts
 
-| Name         | Address                                                                                                                        | ABI                                                             | Network | Description                                                     |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- | ------- | --------------------------------------------------------------- |
-| TokenNetwork | [`0x3EA2a1fED7FdEf300DA19E97092Ce8FdF8bf66A3`](https://goerli.etherscan.io/address/0x3EA2a1fED7FdEf300DA19E97092Ce8FdF8bf66A3) | [tttNetwork.json](./packages/contracts/src/abi/tttNetwork.json) | Goerli  | Raiden Network's TokenNetwork contract for the TTT ERC-20 token |
-| CustomToken  | [`0x59105441977ecD9d805A4f5b060E34676F50F806`](https://goerli.etherscan.io/address/0x59105441977ecd9d805a4f5b060e34676f50f806) | [tttErc20.json](./packages/contracts/src/abi/tttErc20.json)     | Goerli  | ERC20 Token Contract                                            |
+|Name|Address|ABI|Network|Description|
+|--|--|--|--|--|
+|TokenNetwork|[`0x3EA2a1fED7FdEf300DA19E97092Ce8FdF8bf66A3`](https://goerli.etherscan.io/address/0x3EA2a1fED7FdEf300DA19E97092Ce8FdF8bf66A3)|[tttNetwork.json](./packages/contracts/src/abi/tttNetwork.json)|Goerli|Raiden Network's TokenNetwork contract for the TTT ERC-20 token
+|CustomToken|[`0x59105441977ecD9d805A4f5b060E34676F50F806`](https://goerli.etherscan.io/address/0x59105441977ecd9d805a4f5b060e34676f50f806)|[tttErc20.json](./packages/contracts/src/abi/tttErc20.json)|Goerli|ERC20 Token Contract|
 
 ## Requirements
-<<<<<<< HEAD
-=======
-
->>>>>>> 56e295de3f8112fb2732309354fd4f23360ae356
-- [x] Observe and list the `ChannelOpened`, `ChannelClosed` and `ChannelSettled` events emitted by the smart contract
-- [x] Keep a list of the open raiden channels
+- [ ] Observe and list the `ChannelOpened`, `ChannelClosed` and `ChannelSettled` events emitted by the smart contract
+- [ ] Keep a list of the open raiden channels
 - [ ] List should update as new events are observed
 - [x] Write either in TypeScript or JavaScript
 - [x] Use any of the following frameworks: Vue.js, React, Angular
@@ -24,9 +20,7 @@ Monitoring of [Raiden Network](https://raiden.network/) Payment Channels.
 - [ ] Provide tests
 
 ## Available Scripts
-
 Owing to this dependency on Yarn Workspaces, Create Eth App can't be used with npm.
-
 ### React App
 
 #### `yarn react-app:start`
@@ -66,7 +60,7 @@ You don’t have to ever use `react-app:eject`. The curated feature set is suita
 
 ### Subgraph
 
-The Graph is a tool for for indexing events emitted on the Ethereum blockchain. It provides you with an easy-to-use GraphQL API.  
+[The Graph](https://thegraph.com/) is a tool for for indexing events emitted on the Ethereum blockchain. It provides you with an easy-to-use GraphQL API.  
 To learn more, check out the [The Graph documentation](https://thegraph.com/docs).
 
 #### `yarn subgraph:codegen`
@@ -95,4 +89,6 @@ You may also want to [read more about the hosted service](https://thegraph.com/d
 
 ## Ressources
 
-This application was bootstrapped with [Create Eth App](https://github.com/paulrberg/create-eth-app) by [PaulRBerg](https://github.com/paulrberg).
+- [Create Eth App](https://github.com/paulrberg/create-eth-app) by [PaulRBerg](https://github.com/paulrberg)
+- [Rimble UI](https://rimble.consensys.design/): open-source React component library for dApps
+- [Easy Peasy](https://easy-peasy.now.sh/): Vegetarian friendly state for React 
