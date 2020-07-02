@@ -18,11 +18,17 @@ export const Filters = () => {
 
   return (
     <Flex justifyContent='space-around' mb={4}>
-      {Object.keys(queries).map((queryName, index) => (
-        <Button key={index} onClick={() => updateQuery(queries[queryName])}>
-          {queryName}
-        </Button>
-      ))}
+      {Object.keys(queries).map((queryName, index) => {
+        const { queryString, icon } = queries[queryName]
+        return (
+          <Button
+            key={index}
+            icon={icon}
+            onClick={() => updateQuery(queryString)}>
+            {queryName}
+          </Button>
+        )
+      })}
     </Flex>
   )
 }
