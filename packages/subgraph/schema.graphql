@@ -6,6 +6,7 @@ enum ChannelStatus @entity {
 
 type Channel @entity {
   id: ID!
+  tx: Bytes!
   openedAtBlock: BigInt!
   status: ChannelStatus!
   participant1: Bytes!
