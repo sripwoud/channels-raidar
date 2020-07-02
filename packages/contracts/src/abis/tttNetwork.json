@@ -1,640 +1,43 @@
 [
   {
-    "constant": false,
     "inputs": [
       {
-        "name": "channel_identifier",
-        "type": "uint256"
-      },
-      {
-        "name": "participant",
-        "type": "address"
-      },
-      {
-        "name": "partner",
-        "type": "address"
-      },
-      {
-        "name": "merkle_tree_leaves",
-        "type": "bytes"
-      }
-    ],
-    "name": "unlock",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "participant1",
-        "type": "address"
-      },
-      {
-        "name": "participant2",
-        "type": "address"
-      },
-      {
-        "name": "settle_timeout",
-        "type": "uint256"
-      }
-    ],
-    "name": "openChannel",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [],
-    "name": "deprecate",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "settlement_timeout_max",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "deprecation_executor",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "secret_registry",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "chain_id",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "token_network_deposit_limit",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "",
-        "type": "bytes32"
-      }
-    ],
-    "name": "participants_hash_to_channel_identifier",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "channel_participant_deposit_limit",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "channel_identifier",
-        "type": "uint256"
-      },
-      {
-        "name": "participant",
-        "type": "address"
-      },
-      {
-        "name": "total_deposit",
-        "type": "uint256"
-      },
-      {
-        "name": "partner",
-        "type": "address"
-      }
-    ],
-    "name": "setTotalDeposit",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "channel_counter",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "MAX_SAFE_UINT256",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "contract_address",
-        "type": "address"
-      }
-    ],
-    "name": "contractExists",
-    "outputs": [
-      {
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "participant",
-        "type": "address"
-      },
-      {
-        "name": "partner",
-        "type": "address"
-      }
-    ],
-    "name": "getParticipantsHash",
-    "outputs": [
-      {
-        "name": "",
-        "type": "bytes32"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "pure",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "channel_identifier",
-        "type": "uint256"
-      },
-      {
-        "name": "participant1",
-        "type": "address"
-      },
-      {
-        "name": "participant2",
-        "type": "address"
-      }
-    ],
-    "name": "getChannelInfo",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      },
-      {
-        "name": "",
-        "type": "uint8"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "signature_prefix",
-    "outputs": [
-      {
-        "name": "",
-        "type": "string"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "participant",
-        "type": "address"
-      },
-      {
-        "name": "partner",
-        "type": "address"
-      }
-    ],
-    "name": "getChannelIdentifier",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "channel_identifier",
-        "type": "uint256"
-      },
-      {
-        "name": "participant1",
-        "type": "address"
-      },
-      {
-        "name": "participant1_transferred_amount",
-        "type": "uint256"
-      },
-      {
-        "name": "participant1_locked_amount",
-        "type": "uint256"
-      },
-      {
-        "name": "participant1_locksroot",
-        "type": "bytes32"
-      },
-      {
-        "name": "participant2",
-        "type": "address"
-      },
-      {
-        "name": "participant2_transferred_amount",
-        "type": "uint256"
-      },
-      {
-        "name": "participant2_locked_amount",
-        "type": "uint256"
-      },
-      {
-        "name": "participant2_locksroot",
-        "type": "bytes32"
-      }
-    ],
-    "name": "settleChannel",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "contract_version",
-    "outputs": [
-      {
-        "name": "",
-        "type": "string"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "safety_deprecation_switch",
-    "outputs": [
-      {
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "settlement_timeout_min",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "channel_identifier",
-        "type": "uint256"
-      },
-      {
-        "name": "partner",
-        "type": "address"
-      },
-      {
-        "name": "balance_hash",
-        "type": "bytes32"
-      },
-      {
-        "name": "nonce",
-        "type": "uint256"
-      },
-      {
-        "name": "additional_hash",
-        "type": "bytes32"
-      },
-      {
-        "name": "signature",
-        "type": "bytes"
-      }
-    ],
-    "name": "closeChannel",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "name": "channels",
-    "outputs": [
-      {
-        "name": "settle_block_number",
-        "type": "uint256"
-      },
-      {
-        "name": "state",
-        "type": "uint8"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "channel_identifier",
-        "type": "uint256"
-      },
-      {
-        "name": "participant",
-        "type": "address"
-      },
-      {
-        "name": "partner",
-        "type": "address"
-      }
-    ],
-    "name": "getChannelParticipantInfo",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      },
-      {
-        "name": "",
-        "type": "uint256"
-      },
-      {
-        "name": "",
-        "type": "bool"
-      },
-      {
-        "name": "",
-        "type": "bytes32"
-      },
-      {
-        "name": "",
-        "type": "uint256"
-      },
-      {
-        "name": "",
-        "type": "bytes32"
-      },
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "channel_identifier",
-        "type": "uint256"
-      },
-      {
-        "name": "closing_participant",
-        "type": "address"
-      },
-      {
-        "name": "non_closing_participant",
-        "type": "address"
-      },
-      {
-        "name": "balance_hash",
-        "type": "bytes32"
-      },
-      {
-        "name": "nonce",
-        "type": "uint256"
-      },
-      {
-        "name": "additional_hash",
-        "type": "bytes32"
-      },
-      {
-        "name": "closing_signature",
-        "type": "bytes"
-      },
-      {
-        "name": "non_closing_signature",
-        "type": "bytes"
-      }
-    ],
-    "name": "updateNonClosingBalanceProof",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "token",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "channel_identifier",
-        "type": "uint256"
-      },
-      {
-        "name": "participant",
-        "type": "address"
-      },
-      {
-        "name": "partner",
-        "type": "address"
-      }
-    ],
-    "name": "getUnlockIdentifier",
-    "outputs": [
-      {
-        "name": "",
-        "type": "bytes32"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "pure",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
+        "internalType": "address",
         "name": "_token_address",
         "type": "address"
       },
       {
+        "internalType": "address",
         "name": "_secret_registry",
         "type": "address"
       },
+      { "internalType": "uint256", "name": "_chain_id", "type": "uint256" },
       {
-        "name": "_chain_id",
-        "type": "uint256"
-      },
-      {
+        "internalType": "uint256",
         "name": "_settlement_timeout_min",
         "type": "uint256"
       },
       {
+        "internalType": "uint256",
         "name": "_settlement_timeout_max",
         "type": "uint256"
       },
       {
+        "internalType": "address",
         "name": "_deprecation_executor",
         "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_channel_participant_deposit_limit",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_token_network_deposit_limit",
+        "type": "uint256"
       }
     ],
-    "payable": false,
     "stateMutability": "nonpayable",
     "type": "constructor"
   },
@@ -643,26 +46,30 @@
     "inputs": [
       {
         "indexed": true,
+        "internalType": "uint256",
         "name": "channel_identifier",
         "type": "uint256"
       },
       {
         "indexed": true,
-        "name": "participant1",
+        "internalType": "address",
+        "name": "closing_participant",
         "type": "address"
       },
       {
         "indexed": true,
-        "name": "participant2",
-        "type": "address"
+        "internalType": "uint256",
+        "name": "nonce",
+        "type": "uint256"
       },
       {
         "indexed": false,
-        "name": "settle_timeout",
-        "type": "uint256"
+        "internalType": "bytes32",
+        "name": "balance_hash",
+        "type": "bytes32"
       }
     ],
-    "name": "ChannelOpened",
+    "name": "ChannelClosed",
     "type": "event"
   },
   {
@@ -670,16 +77,19 @@
     "inputs": [
       {
         "indexed": true,
+        "internalType": "uint256",
         "name": "channel_identifier",
         "type": "uint256"
       },
       {
         "indexed": true,
+        "internalType": "address",
         "name": "participant",
         "type": "address"
       },
       {
         "indexed": false,
+        "internalType": "uint256",
         "name": "total_deposit",
         "type": "uint256"
       }
@@ -692,21 +102,30 @@
     "inputs": [
       {
         "indexed": true,
+        "internalType": "uint256",
         "name": "channel_identifier",
         "type": "uint256"
       },
       {
         "indexed": true,
-        "name": "closing_participant",
+        "internalType": "address",
+        "name": "participant1",
         "type": "address"
       },
       {
         "indexed": true,
-        "name": "nonce",
+        "internalType": "address",
+        "name": "participant2",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "settle_timeout",
         "type": "uint256"
       }
     ],
-    "name": "ChannelClosed",
+    "name": "ChannelOpened",
     "type": "event"
   },
   {
@@ -714,31 +133,74 @@
     "inputs": [
       {
         "indexed": true,
+        "internalType": "uint256",
+        "name": "channel_identifier",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "participant1_amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "participant1_locksroot",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "participant2_amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "participant2_locksroot",
+        "type": "bytes32"
+      }
+    ],
+    "name": "ChannelSettled",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
         "name": "channel_identifier",
         "type": "uint256"
       },
       {
         "indexed": true,
-        "name": "participant",
+        "internalType": "address",
+        "name": "receiver",
         "type": "address"
       },
       {
         "indexed": true,
-        "name": "partner",
+        "internalType": "address",
+        "name": "sender",
         "type": "address"
       },
       {
         "indexed": false,
+        "internalType": "bytes32",
         "name": "locksroot",
         "type": "bytes32"
       },
       {
         "indexed": false,
+        "internalType": "uint256",
         "name": "unlocked_amount",
         "type": "uint256"
       },
       {
         "indexed": false,
+        "internalType": "uint256",
         "name": "returned_tokens",
         "type": "uint256"
       }
@@ -751,21 +213,37 @@
     "inputs": [
       {
         "indexed": true,
+        "internalType": "uint256",
         "name": "channel_identifier",
         "type": "uint256"
       },
       {
         "indexed": true,
-        "name": "closing_participant",
+        "internalType": "address",
+        "name": "participant",
         "type": "address"
       },
       {
-        "indexed": true,
-        "name": "nonce",
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "total_withdraw",
         "type": "uint256"
       }
     ],
-    "name": "NonClosingBalanceProofUpdated",
+    "name": "ChannelWithdraw",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "new_value",
+        "type": "bool"
+      }
+    ],
+    "name": "DeprecationSwitch",
     "type": "event"
   },
   {
@@ -773,21 +251,437 @@
     "inputs": [
       {
         "indexed": true,
+        "internalType": "uint256",
         "name": "channel_identifier",
         "type": "uint256"
       },
       {
-        "indexed": false,
-        "name": "participant1_amount",
+        "indexed": true,
+        "internalType": "address",
+        "name": "closing_participant",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "nonce",
         "type": "uint256"
       },
       {
         "indexed": false,
-        "name": "participant2_amount",
-        "type": "uint256"
+        "internalType": "bytes32",
+        "name": "balance_hash",
+        "type": "bytes32"
       }
     ],
-    "name": "ChannelSettled",
+    "name": "NonClosingBalanceProofUpdated",
     "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "MAX_SAFE_UINT256",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "chain_id",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "channel_counter",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "channel_participant_deposit_limit",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "name": "channels",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "settle_block_number",
+        "type": "uint256"
+      },
+      {
+        "internalType": "enum TokenNetwork.ChannelState",
+        "name": "state",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "channel_identifier",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "non_closing_participant",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "closing_participant",
+        "type": "address"
+      },
+      { "internalType": "bytes32", "name": "balance_hash", "type": "bytes32" },
+      { "internalType": "uint256", "name": "nonce", "type": "uint256" },
+      {
+        "internalType": "bytes32",
+        "name": "additional_hash",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "bytes",
+        "name": "non_closing_signature",
+        "type": "bytes"
+      },
+      { "internalType": "bytes", "name": "closing_signature", "type": "bytes" }
+    ],
+    "name": "closeChannel",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "contract_address",
+        "type": "address"
+      }
+    ],
+    "name": "contractExists",
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "deprecate",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "deprecation_executor",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "participant", "type": "address" },
+      { "internalType": "address", "name": "partner", "type": "address" }
+    ],
+    "name": "getChannelIdentifier",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "channel_identifier",
+        "type": "uint256"
+      },
+      { "internalType": "address", "name": "participant1", "type": "address" },
+      { "internalType": "address", "name": "participant2", "type": "address" }
+    ],
+    "name": "getChannelInfo",
+    "outputs": [
+      { "internalType": "uint256", "name": "", "type": "uint256" },
+      {
+        "internalType": "enum TokenNetwork.ChannelState",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "channel_identifier",
+        "type": "uint256"
+      },
+      { "internalType": "address", "name": "participant", "type": "address" },
+      { "internalType": "address", "name": "partner", "type": "address" }
+    ],
+    "name": "getChannelParticipantInfo",
+    "outputs": [
+      { "internalType": "uint256", "name": "", "type": "uint256" },
+      { "internalType": "uint256", "name": "", "type": "uint256" },
+      { "internalType": "bool", "name": "", "type": "bool" },
+      { "internalType": "bytes32", "name": "", "type": "bytes32" },
+      { "internalType": "uint256", "name": "", "type": "uint256" },
+      { "internalType": "bytes32", "name": "", "type": "bytes32" },
+      { "internalType": "uint256", "name": "", "type": "uint256" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "participant", "type": "address" },
+      { "internalType": "address", "name": "partner", "type": "address" }
+    ],
+    "name": "getParticipantsHash",
+    "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "channel_identifier",
+        "type": "uint256"
+      },
+      { "internalType": "address", "name": "sender", "type": "address" },
+      { "internalType": "address", "name": "receiver", "type": "address" }
+    ],
+    "name": "getUnlockIdentifier",
+    "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "participant1", "type": "address" },
+      { "internalType": "address", "name": "participant2", "type": "address" },
+      { "internalType": "uint256", "name": "settle_timeout", "type": "uint256" }
+    ],
+    "name": "openChannel",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
+    "name": "participants_hash_to_channel_identifier",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "safety_deprecation_switch",
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "secret_registry",
+    "outputs": [
+      {
+        "internalType": "contract SecretRegistry",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "channel_identifier",
+        "type": "uint256"
+      },
+      { "internalType": "address", "name": "participant", "type": "address" },
+      { "internalType": "uint256", "name": "total_deposit", "type": "uint256" },
+      { "internalType": "address", "name": "partner", "type": "address" }
+    ],
+    "name": "setTotalDeposit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "channel_identifier",
+        "type": "uint256"
+      },
+      { "internalType": "address", "name": "participant", "type": "address" },
+      {
+        "internalType": "uint256",
+        "name": "total_withdraw",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "expiration_block",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes",
+        "name": "participant_signature",
+        "type": "bytes"
+      },
+      { "internalType": "bytes", "name": "partner_signature", "type": "bytes" }
+    ],
+    "name": "setTotalWithdraw",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "channel_identifier",
+        "type": "uint256"
+      },
+      { "internalType": "address", "name": "participant1", "type": "address" },
+      {
+        "internalType": "uint256",
+        "name": "participant1_transferred_amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "participant1_locked_amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "participant1_locksroot",
+        "type": "bytes32"
+      },
+      { "internalType": "address", "name": "participant2", "type": "address" },
+      {
+        "internalType": "uint256",
+        "name": "participant2_transferred_amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "participant2_locked_amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "participant2_locksroot",
+        "type": "bytes32"
+      }
+    ],
+    "name": "settleChannel",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "settlement_timeout_max",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "settlement_timeout_min",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "signature_prefix",
+    "outputs": [{ "internalType": "string", "name": "", "type": "string" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "token",
+    "outputs": [
+      { "internalType": "contract Token", "name": "", "type": "address" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "token_network_deposit_limit",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "channel_identifier",
+        "type": "uint256"
+      },
+      { "internalType": "address", "name": "receiver", "type": "address" },
+      { "internalType": "address", "name": "sender", "type": "address" },
+      { "internalType": "bytes", "name": "locks", "type": "bytes" }
+    ],
+    "name": "unlock",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "channel_identifier",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "closing_participant",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "non_closing_participant",
+        "type": "address"
+      },
+      { "internalType": "bytes32", "name": "balance_hash", "type": "bytes32" },
+      { "internalType": "uint256", "name": "nonce", "type": "uint256" },
+      {
+        "internalType": "bytes32",
+        "name": "additional_hash",
+        "type": "bytes32"
+      },
+      { "internalType": "bytes", "name": "closing_signature", "type": "bytes" },
+      {
+        "internalType": "bytes",
+        "name": "non_closing_signature",
+        "type": "bytes"
+      }
+    ],
+    "name": "updateNonClosingBalanceProof",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
   }
 ]
