@@ -3,9 +3,9 @@ import { Card, Link } from 'rimble-ui'
 import { InsertLink as LinkIcon } from '@rimble/icons'
 
 const colorCodes = {
-  open: 'primary',
+  open: '#6D8CC8',
   closed: '#5784DE',
-  settled: '#8BE0EE'
+  settled: '#131C5F'
 }
 
 export const Channel = ({ tx, status }) => {
