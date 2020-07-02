@@ -1,7 +1,7 @@
 enum ChannelStatus @entity {
-  open
-  closed
-  settled
+  Open
+  Closed
+  Settled
 }
 
 type Channel @entity {
