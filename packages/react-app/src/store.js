@@ -8,7 +8,7 @@ export default createStore({
     })
   },
   query: {
-    value: queries.all,
+    value: queries['All'].queryString,
     update: action((state, payload) => {
       state.value = payload
     })
