@@ -1,5 +1,5 @@
 import { createStore, action } from 'easy-peasy'
-
+import { queries } from './queries'
 export default createStore({
   channels: {
     data: [],
@@ -8,7 +8,7 @@ export default createStore({
     })
   },
   query: {
-    value: ``,
+    value: queries.all,
     update: action((state, payload) => {
       state.value = payload
     })
