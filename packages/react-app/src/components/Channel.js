@@ -1,11 +1,11 @@
 import React from 'react'
-import { Card, Link } from 'rimble-ui'
+import { Card, Link, Icon, Flex, Text, Table } from 'rimble-ui'
 import { InsertLink as LinkIcon } from '@rimble/icons'
-
+import { queries } from '../queries'
 const colorCodes = {
-  open: '#6D8CC8',
-  closed: '#5784DE',
-  settled: '#131C5F'
+  Open: '#6D8CC8',
+  Closed: '#5784DE',
+  Settled: '#131C5F'
 }
 
 export const Channel = ({
@@ -18,24 +18,46 @@ export const Channel = ({
   settled_amount2
 }) => {
   return (
-    <Card bg={colorCodes[status]} color='white'>
-      <p>{status}</p>
-      <p>1st Participant: {participant1}</p>
-      <p>2nd Participant: {participant2}</p>
-      {status === 'closed' ? <p>Closed by: {closedBy}</p> : <></>}
-      {status === 'settled' ? (
-        <>
-          <p>Settled Amout 1st participant: {settled_amount1}</p>
-          <p>Settled Amount 2nd participant: {settled_amount2}</p>
-        </>
-      ) : (
-        <></>
-      )}
-      <Link
-        href={`https://goerli.etherscan.io/tx/${tx}#eventlog`}
-        target='_blank'>
-        <LinkIcon color='white' />
-      </Link>
+    <Card bg={colorCodes[status]} color='white' fontSize={[1, 2, 3]} flex='1'>
+      <Flex
+        flexDirection='row'
+        flexWrap='nowrap'
+        justifyContent='space-around'
+        mb={2}>
+        <Icon name={queries[status].icon} size='40' />
+        <Text fontSize={[2, 3, 4]} fontWeight='bold'>
+          {status}
+        </Text>
+        <Link
+          href={`https://goerli.etherscan.io/tx/${tx}#eventlog`}
+          target='_blank'>
+          <LinkIcon color='white' size='40' />
+        </Link>
+      </Flex>
+      <Table color='white'>
+        <thead>
+          <tr>
+            <th>Closed by</th>
+            <th>#</th>
+            <th>Address</th>
+            <th>Settled Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{closedBy === participant1 ? 'X' : ''}</td>
+            <td>1</td>
+            <td>{participant1}</td>
+            <td>{settled_amount1}</td>
+          </tr>
+          <tr>
+            <td>{closedBy === participant2 ? 'X' : ''}</td>
+            <td>2</td>
+            <td>{participant2}</td>
+            <td>{settled_amount2}</td>
+          </tr>
+        </tbody>
+      </Table>
     </Card>
   )
 }

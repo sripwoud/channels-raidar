@@ -1,4 +1,5 @@
 import React from 'react'
+import { Flex } from 'rimble-ui'
 import { useStoreState } from 'easy-peasy'
 import { Layout } from './components/Layout'
 import { Channel } from './components/Channel'
@@ -32,11 +33,15 @@ export default () => {
     <div className='App'>
       <Layout>
         <Filters />
-        {channels ? (
-          channels.map((channel, index) => <Channel key={index} {...channel} />)
-        ) : (
-          <> </>
-        )}
+        <Flex flexWrap='wrap' justifyContent='space-around'>
+          {channels ? (
+            channels.map((channel, index) => (
+              <Channel key={index} {...channel} />
+            ))
+          ) : (
+            <> </>
+          )}
+        </Flex>
       </Layout>
     </div>
   )
