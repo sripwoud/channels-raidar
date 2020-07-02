@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useStoreState } from 'easy-peasy'
 import { Layout } from './components/Layout'
 import { Channel } from './components/Channel'
 import { Filters } from './components/Filters'
-import logo from './ethereumLogo.png'
-import { addresses, abis } from '@project/contracts'
-import { ethers } from 'ethers'
+// import logo from './ethereumLogo.png'
+// import { addresses, abis } from '@project/contracts'
+// import { ethers } from 'ethers'
 import './App.css'
 
 // async function readOnchainBalance() {
