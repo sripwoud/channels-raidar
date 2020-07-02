@@ -6,6 +6,11 @@ export const queries = {
       channels(orderBy: openedAtBlock, orderDirection: desc) {
         tx
         status
+        participant1
+        participant2
+        closedBy
+        settled_amount1
+        settled_amount2
       }
     }
   `,
@@ -18,6 +23,8 @@ export const queries = {
       ) {
         status
         tx
+        participant1
+        participant2
       }
     }
   `,
@@ -30,6 +37,9 @@ export const queries = {
       ) {
         status
         tx
+        participant1
+        participant2
+        closedBy
       }
     }
   `,
@@ -42,6 +52,10 @@ export const queries = {
       ) {
         status
         tx
+        participant1
+        participant2
+        settled_amount1
+        settled_amount2
       }
     }
   `
