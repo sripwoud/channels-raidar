@@ -1,9 +1,9 @@
-import erc20Abi from "./abis/erc20.json";
-import ownableAbi from "./abis/ownable.json";
+import tttNetworkAbi from './abis/tttNetwork.json'
+import tttErc20Abi from './abis/tttErc20.json'
 
 const abis = {
-  erc20: erc20Abi,
-  ownable: ownableAbi,
-};
+  tttNetwork: tttNetworkAbi,
+  tttErc20: tttErc20Abi
+}
 
-export default abis;
+export default abis
