@@ -1,13 +1,17 @@
-type Token @entity {
-  id: ID!
-  decimals: Int
-  name: String
-  symbol: String
+enum ChannelStatus @entity {
+  open
+  closed
+  settled
 }
 
-type Transfer @entity {
+type Channel @entity {
   id: ID!
-  from: String!
-  to: String!
-  value: BigInt!
+  openedAtBlock: BigInt!
+  status: ChannelStatus!
+  participant1: Bytes!
+  participant2: Bytes!
+  closedBy: Bytes
+  closingNonce: BigInt
+  settled_amount1: BigInt
+  settled_amount2: BigInt
 }
