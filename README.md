@@ -62,6 +62,9 @@ You don’t have to ever use `react-app:eject`. The curated feature set is suita
 
 [The Graph](https://thegraph.com/) is a tool for for indexing events emitted on the Ethereum blockchain. It provides you with an easy-to-use GraphQL API.  
 To learn more, check out the [The Graph documentation](https://thegraph.com/docs).
+#### Caveat
+> By default query responses are **limited to 100 items per collection**. If you want to receive more, you can go up to 1000 items per collection and beyond that you can paginate.
+See [thegraph faq](https://thegraph.com/docs/quick-start#faq)
 
 #### `yarn subgraph:codegen`
 
