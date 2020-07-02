@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
+import { useStoreState } from 'easy-peasy'
 import { Layout } from './components/Layout'
 import { Channel } from './components/Channel'
+import { Filters } from './components/Filters'
 import logo from './ethereumLogo.png'
 import { addresses, abis } from '@project/contracts'
 import { gql } from 'apollo-boost'
@@ -10,7 +12,7 @@ import './App.css'
 
 const GET_CHANNELS_STATUS = gql`
   {
-    channels(first: 10) {
+    channels(orderBy: openedAtBlock, orderDirection: desc) {
       tx
       status
     }
@@ -36,6 +38,7 @@ const GET_CHANNELS_STATUS = gql`
 
 export default () => {
   const { loading, error, data } = useQuery(GET_CHANNELS_STATUS)
+  const channels = useStoreState(state => state.channels.data)
 
   useEffect(() => {
     if (!loading && !error && data?.channels) {
@@ -45,6 +48,7 @@ export default () => {
   return (
     <div className='App'>
       <Layout>
+        <Filters />
         {data?.channels ? (
           data.channels.map((channel, index) => (
             <Channel key={index} {...channel} />
