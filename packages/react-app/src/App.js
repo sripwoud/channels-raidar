@@ -5,19 +5,8 @@ import { Channel } from './components/Channel'
 import { Filters } from './components/Filters'
 import logo from './ethereumLogo.png'
 import { addresses, abis } from '@project/contracts'
-import { gql } from 'apollo-boost'
 import { ethers } from 'ethers'
-import { useQuery } from '@apollo/react-hooks'
 import './App.css'
-
-const GET_CHANNELS_STATUS = gql`
-  {
-    channels(orderBy: openedAtBlock, orderDirection: desc) {
-      tx
-      status
-    }
-  }
-`
 
 // async function readOnchainBalance() {
 //   // Should replace with the end-user wallet, e.g. Metamask
@@ -37,22 +26,14 @@ const GET_CHANNELS_STATUS = gql`
 // }
 
 export default () => {
-  const { loading, error, data } = useQuery(GET_CHANNELS_STATUS)
   const channels = useStoreState(state => state.channels.data)
-
-  useEffect(() => {
-    if (!loading && !error && data?.channels) {
-    }
-  }, [loading, error, data])
 
   return (
     <div className='App'>
       <Layout>
         <Filters />
-        {data?.channels ? (
-          data.channels.map((channel, index) => (
-            <Channel key={index} {...channel} />
-          ))
+        {channels ? (
+          channels.map((channel, index) => <Channel key={index} {...channel} />)
         ) : (
           <> </>
         )}
