@@ -15,7 +15,7 @@ export const Header = props => {
         </Link>
         -
         <Link
-          href='hhttps://github.com/r1oga/channels-raidar'
+          href='https://github.com/r1oga/channels-raidar'
           target='__blank'
           px={2}>
           GitHub
