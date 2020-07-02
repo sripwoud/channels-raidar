@@ -4,23 +4,29 @@ Monitoring of [Raiden Network](https://raiden.network/) Payment Channels.
 
 ## Contracts
 
-|Name|Address|ABI|Network|Description|
-|--|--|--|--|--|
-|TokenNetwork|[`0x3EA2a1fED7FdEf300DA19E97092Ce8FdF8bf66A3`](https://goerli.etherscan.io/address/0x3EA2a1fED7FdEf300DA19E97092Ce8FdF8bf66A3)|[tttNetwork.json](./packages/contracts/src/abi/tttNetwork.json)|Goerli|Raiden Network's TokenNetwork contract for the TTT ERC-20 token
-|CustomToken|[`0x59105441977ecD9d805A4f5b060E34676F50F806`](https://goerli.etherscan.io/address/0x59105441977ecd9d805a4f5b060e34676f50f806)|[tttErc20.json](./packages/contracts/src/abi/tttErc20.json)|Goerli|ERC20 Token Contract|
+| Name         | Address                                                                                                                        | ABI                                                             | Network | Description                                                     |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- | ------- | --------------------------------------------------------------- |
+| TokenNetwork | [`0x3EA2a1fED7FdEf300DA19E97092Ce8FdF8bf66A3`](https://goerli.etherscan.io/address/0x3EA2a1fED7FdEf300DA19E97092Ce8FdF8bf66A3) | [tttNetwork.json](./packages/contracts/src/abi/tttNetwork.json) | Goerli  | Raiden Network's TokenNetwork contract for the TTT ERC-20 token |
+| CustomToken  | [`0x59105441977ecD9d805A4f5b060E34676F50F806`](https://goerli.etherscan.io/address/0x59105441977ecd9d805a4f5b060e34676f50f806) | [tttErc20.json](./packages/contracts/src/abi/tttErc20.json)     | Goerli  | ERC20 Token Contract                                            |
 
 ## Requirements
-- [] Observe and list the `ChannelOpened`, `ChannelClosed` and `ChannelSettled` events emitted by the smart contract
-- [] Keep a list of the open raiden channels
-- [] List should update as new events are observed
-- [] Write either in TypeScript or JavaScript
-- [] Use any of the following frameworks: Vue.js, React, Angular
-- [] Build using a testable architecture
-- [] Manage state
-- [] Provide tests
+<<<<<<< HEAD
+=======
+
+>>>>>>> 56e295de3f8112fb2732309354fd4f23360ae356
+- [x] Observe and list the `ChannelOpened`, `ChannelClosed` and `ChannelSettled` events emitted by the smart contract
+- [x] Keep a list of the open raiden channels
+- [ ] List should update as new events are observed
+- [x] Write either in TypeScript or JavaScript
+- [x] Use any of the following frameworks: Vue.js, React, Angular
+- [ ] Build using a testable architecture
+- [x] Manage state
+- [ ] Provide tests
 
 ## Available Scripts
+
 Owing to this dependency on Yarn Workspaces, Create Eth App can't be used with npm.
+
 ### React App
 
 #### `yarn react-app:start`
