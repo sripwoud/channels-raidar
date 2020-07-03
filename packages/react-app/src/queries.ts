@@ -65,6 +65,7 @@ export const queries = {
           tx
           participant1
           participant2
+          closedBy
           settled_amount1
           settled_amount2
         }
