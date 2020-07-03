@@ -40,21 +40,18 @@ export const Channel = ({
         <thead>
           <tr>
             <th>Closed by</th>
-            <th>#</th>
             <th>Address</th>
             <th>Settled Amount</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>{closedBy === participant1 ? 'X' : ''}</td>
-            <td>1</td>
+            <td>{closedBy === participant1 ? '>' : ''}</td>
             <td>{participant1}</td>
             <td>{settled_amount1}</td>
           </tr>
           <tr>
-            <td>{closedBy === participant2 ? 'X' : ''}</td>
-            <td>2</td>
+            <td>{closedBy === participant2 ? '>' : ''}</td>
             <td>{participant2}</td>
             <td>{settled_amount2}</td>
           </tr>
