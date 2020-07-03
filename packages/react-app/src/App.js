@@ -3,7 +3,7 @@ import { Flex } from 'rimble-ui'
 import { useStoreState } from 'easy-peasy'
 import { Layout } from './components/Layout'
 import { Channel } from './components/Channel'
-import { Filters } from './components/Filters'
+import { Form } from './components/Form'
 // import logo from './ethereumLogo.png'
 // import { addresses, abis } from '@project/contracts'
 // import { ethers } from 'ethers'
@@ -28,11 +28,10 @@ import './App.css'
 
 export default () => {
   const channels = useStoreState(state => state.channels.data)
-
   return (
     <div className='App'>
       <Layout>
-        <Filters />
+        <Form />
         <Flex flexWrap='wrap' justifyContent='space-around'>
           {channels ? (
             channels.map((channel, index) => (
