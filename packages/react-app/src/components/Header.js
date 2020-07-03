@@ -16,7 +16,7 @@ const { ethereum } = window
 
 export const Header = props => {
   const context = useWeb3React()
-  const { account, chainId, activate, deactivate, active, error } = context
+  const { account, chainId, activate, /*deactivate,*/ active, error } = context
 
   if (ethereum && ethereum.on && !active && !error) {
     activate(injected)
@@ -54,7 +54,6 @@ export const Header = props => {
     return () => {}
   }, [active, error, activate])
 
-  console.log(account)
   return (
     <>
       <Box

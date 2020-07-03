@@ -1,7 +1,7 @@
 enum ChannelStatus @entity {
-  Open
-  Closed
-  Settled
+  open
+  closed
+  settled
 }
 
 type Channel @entity {
@@ -9,10 +9,8 @@ type Channel @entity {
   tx: Bytes!
   openedAtBlock: BigInt!
   status: ChannelStatus!
-  participant1: Bytes!
-  participant2: Bytes!
+  participants: [Bytes!]!
   closedBy: Bytes
   closingNonce: BigInt
-  settled_amount1: BigInt
-  settled_amount2: BigInt
+  settled_amounts: [BigInt!]
 }
