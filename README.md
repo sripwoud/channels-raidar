@@ -9,19 +9,22 @@ Monitoring of [Raiden Network](https://raiden.network/) Payment Channels.
 |TokenNetwork|[`0x3EA2a1fED7FdEf300DA19E97092Ce8FdF8bf66A3`](https://goerli.etherscan.io/address/0x3EA2a1fED7FdEf300DA19E97092Ce8FdF8bf66A3)|[tttNetwork.json](./packages/contracts/src/abi/tttNetwork.json)|Goerli|Raiden Network's TokenNetwork contract for the TTT ERC-20 token
 |CustomToken|[`0x59105441977ecD9d805A4f5b060E34676F50F806`](https://goerli.etherscan.io/address/0x59105441977ecd9d805a4f5b060e34676f50f806)|[tttErc20.json](./packages/contracts/src/abi/tttErc20.json)|Goerli|ERC20 Token Contract|
 
-## [Requirement]
-### [Initials](https://gist.github.com/r1oga/3d2749210a994749b57a39695fdf81e9)
+## Requirements
+### [Initial](https://gist.github.com/r1oga/3d2749210a994749b57a39695fdf81e9)
 - [x] Observe and list the `ChannelOpened`, `ChannelClosed` and `ChannelSettled` events emitted by the smart contract
 - [x] Keep a list of the open raiden channels
 - [ ] List should update as new events are observed
 - [x] Write either in TypeScript or JavaScript
-- [x] Use any of the following frameworks: Vue.js, React, Angular
+- [x] Use any of the following frameworks: ~~Vue.js~~, React, ~~Angular~~
 - [ ] Build using a testable architecture
 - [x] Manage state
 - [ ] Provide tests
 
 ### Additional
-- [ ] Query smart contract state history using a [The Graph](https://thegraph.com/)'s subgraph
+- [x] Query smart contract state history using a [The Graph](https://thegraph.com/)'s subgraph
+- [x] Filter by channel state (open, closed, settled)
+- [ ] Filter by channel's participant address
+
 ## Available Scripts
 Owing to this dependency on Yarn Workspaces, Create Eth App can't be used with npm.
 ### React App
