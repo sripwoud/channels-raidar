@@ -8,9 +8,12 @@ export default createStore({
     })
   },
   query: {
-    value: queries['All'].queryString,
+    value: queries.all.all.queryString,
     update: action((state, payload) => {
       state.value = payload
     })
+  },
+  addresses: {
+    value: 'all'
   }
 })

@@ -3,3 +3,8 @@ export enum ChannelStatus {
   closed = 'closed',
   settled = 'settled'
 }
+
+export enum AddressesFilters {
+  all = 'all',
+  one = 'one'
+}
