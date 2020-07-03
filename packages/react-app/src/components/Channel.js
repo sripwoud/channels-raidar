@@ -1,14 +1,13 @@
 import React from 'react'
 import { Card, Link, Icon, Flex, Text, Table } from 'rimble-ui'
 import { InsertLink as LinkIcon } from '@rimble/icons'
-import { queries } from '../queries'
-import { ChannelStatus } from '../types'
+import { ChannelFilter } from '../constants'
 import { capitalize } from '../helpers'
 
-const colorCodes = {
-  [ChannelStatus.open]: '#6D8CC8',
-  [ChannelStatus.closed]: '#5784DE',
-  [ChannelStatus.settled]: '#131C5F'
+const channelsMapping = {
+  [ChannelFilter.open]: { color: '#6D8CC8', icon: 'LockOpen' },
+  [ChannelFilter.closed]: { color: '#5784DE', icon: 'LockOutline' },
+  [ChannelFilter.settled]: { color: '#131C5F', icon: 'Gavel' }
 }
 
 export const Channel = ({
@@ -19,13 +18,17 @@ export const Channel = ({
   settled_amounts
 }) => {
   return (
-    <Card bg={colorCodes[status]} color='white' fontSize={[1, 2, 3]} flex='1'>
+    <Card
+      bg={channelsMapping[status].color}
+      color='white'
+      fontSize={[1, 2, 3]}
+      flex='1'>
       <Flex
         flexDirection='row'
         flexWrap='nowrap'
         justifyContent='space-around'
         mb={2}>
-        <Icon name={queries.all[status].icon} size='40' />
+        <Icon name={channelsMapping[status].icon} size='40' />
         <Text fontSize={[2, 3, 4]} fontWeight='bold'>
           {capitalize(status)}
         </Text>

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Link, Text, Box } from 'rimble-ui'
+import { Link, Text, Box, EthAddress, Heading } from 'rimble-ui'
 import { useWeb3React } from '@web3-react/core'
 import { InjectedConnector } from '@web3-react/injected-connector'
 import ConnectionBanner from '@rimble/connection-banner'
@@ -73,16 +73,23 @@ export const Header = props => {
           GitHub
         </Link>
       </Box>
-      <h1>CHANNELS RAIDAR</h1>
-      <Text mb={4}>
+      <Heading as='h1' my={2}>
+        CHANNELS RAIDAR
+      </Heading>
+      <Text fontSize={3}>
         Monitoring of
-        <Link px={2} href='https://raiden.network/' target='_blank'>
+        <Link
+          fontSize='inherit'
+          px={2}
+          href='https://raiden.network/'
+          target='_blank'>
           Raiden Network
         </Link>
         Payment Channels
       </Text>
       <ConnectionBanner currentNetwork={chainId} requiredNetwork={5} />
-      <p>Active account: {account}</p>
+      <Text fontWeight='bold'>Active address</Text>
+      <EthAddress address={account} mb={2} maxWidth='520px' mx='auto' />
     </>
   )
 }
