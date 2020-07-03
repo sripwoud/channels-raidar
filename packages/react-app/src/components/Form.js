@@ -2,21 +2,22 @@ import React, { useEffect, useState } from 'react'
 import { Field, Select } from 'rimble-ui'
 import { useStoreActions, useStoreState } from 'easy-peasy'
 import { useQuery } from '@apollo/react-hooks'
+import { useWeb3React } from '@web3-react/core'
 import { capitalize } from '../helpers'
-
 import { queries } from '../queries'
-import { ChannelStatus, AddressesFilters } from '../constants'
+import { ChannelFilter, AddressFilter } from '../constants'
 
 export const Form = () => {
-  const query = useStoreState(state => state.query.value)
-  const channels = useStoreState(state => state.channels.data)
-  const { loading, error, data } = useQuery(query)
-
   const [addressFilter, setAddressFilter] = useState('all')
   const [channelFilter, setChannelFilter] = useState('all')
+  const { account } = useWeb3React()
+  const channels = useStoreState(state => state.channels.data)
+  const { loading, error, data } = useQuery(
+    queries(addressFilter, channelFilter)
+  )
 
   const updateChannels = useStoreActions(actions => actions.channels.update)
-  const updateQuery = useStoreActions(actions => actions.query.update)
+
   useEffect(() => {
     if (!loading && !error && data?.channels) {
       updateChannels(data.channels)
@@ -25,23 +26,26 @@ export const Form = () => {
 
   return (
     <>
-      <Field label='Which addresse(s)?'>
+      <Field label='Addresses' mr={4}>
         <Select
           required
-          options={[
-            { value: AddressesFilters.all, label: 'All' },
-            { value: AddressesFilters.one, label: 'Only yours' }
-          ]}
-          onChange={event => setChannelFilter(event.target.value)}
+          options={[{ value: 'todo', label: 'todo' }]}
+          // options={[
+          //   { value: AddressFilter.all, label: 'All' },
+          //   { value: account, label: 'Only yours' }
+          // ]}
+          // onChange={event => {
+          //   setAddressFilter(event.target.value)
+          // }}
         />
       </Field>
-      <Field label='Which channel(s)?'>
+      <Field label='Channels'>
         <Select
           required
-          options={Object.keys(queries.all).map(key => {
-            return { value: key, label: capitalize(key) }
+          options={Object.keys(ChannelFilter).map(channelFilter => {
+            return { value: channelFilter, label: capitalize(channelFilter) }
           })}
-          onChange={event => setAddressFilter(event.target.value)}
+          onChange={event => setChannelFilter(event.target.value)}
         />
       </Field>
       <p>{channels.length}</p>
