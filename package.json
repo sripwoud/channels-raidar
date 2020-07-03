@@ -28,7 +28,5 @@
       "**/@graphprotocol/graph-ts/**"
     ]
   },
-  "dependencies": {
-    "typescript": "^3.9.6"
-  }
+  "dependencies": {}
 }
