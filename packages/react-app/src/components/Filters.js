@@ -19,7 +19,7 @@ export const Filters = () => {
 
   return (
     <>
-      <Flex justifyContent='space-around' mb={4}>
+      <Flex justifyContent='space-around' my={3}>
         {Object.keys(queries).map((queryName, index) => {
           const { queryString, icon } = queries[queryName]
           return (
