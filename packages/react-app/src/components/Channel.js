@@ -2,10 +2,12 @@ import React from 'react'
 import { Card, Link, Icon, Flex, Text, Table } from 'rimble-ui'
 import { InsertLink as LinkIcon } from '@rimble/icons'
 import { queries } from '../queries'
+import { ChannelStatus } from '../types'
+
 const colorCodes = {
-  Open: '#6D8CC8',
-  Closed: '#5784DE',
-  Settled: '#131C5F'
+  [ChannelStatus.open]: '#6D8CC8',
+  [ChannelStatus.closed]: '#5784DE',
+  [ChannelStatus.settled]: '#131C5F'
 }
 
 export const Channel = ({

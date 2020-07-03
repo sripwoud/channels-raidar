@@ -1,4 +1,5 @@
 import { gql } from 'apollo-boost'
+import { ChannelStatus } from './types'
 
 export const queries = {
   All: {
@@ -17,7 +18,7 @@ export const queries = {
     `,
     icon: 'SelectAll'
   },
-  Open: {
+  [ChannelStatus.open]: {
     queryString: gql`
       {
         channels(
@@ -34,7 +35,7 @@ export const queries = {
     `,
     icon: 'LockOpen'
   },
-  Closed: {
+  [ChannelStatus.closed]: {
     queryString: gql`
       {
         channels(
@@ -52,7 +53,7 @@ export const queries = {
     `,
     icon: 'LockOutline'
   },
-  Settled: {
+  [ChannelStatus.settled]: {
     queryString: gql`
       {
         channels(
