@@ -20,7 +20,7 @@ const customTheme = {
     text: '#000',
     [ChannelFilter.open]: '#009CB9',
     [ChannelFilter.closed]: '#00687B',
-    [ChannelFilter.settled]: '#00343E'
+    [ChannelFilter.settled]: '#00366A'
   }
 }
 

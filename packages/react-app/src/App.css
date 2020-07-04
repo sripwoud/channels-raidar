@@ -4,3 +4,9 @@
   overflow-x: hidden;
   background: black;
 }
+
+th,
+tr {
+  margin: 0 !important;
+  padding: 0;
+}
