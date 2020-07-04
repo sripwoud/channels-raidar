@@ -2,7 +2,8 @@ import React from 'react'
 import { Card, Link, Icon, Flex, Text, Table } from 'rimble-ui'
 import { InsertLink as LinkIcon } from '@rimble/icons'
 import { ChannelFilter } from '../constants'
-import { capitalize } from '../helpers'
+import { capitalize, friendlyAmountFormat } from '../helpers'
+import { AddressLink } from './AddressLink'
 
 const channelsMapping = {
   [ChannelFilter.open]: { icon: 'LockOpen' },
@@ -21,44 +22,63 @@ export const Channel = ({
     <Card
       borderRadius='4px'
       maxWidth='820px'
-      mb={2}
+      m={2}
+      p={0}
       bg={ChannelFilter[status]}
       color='white'
-      fontSize={[1, 2, 3]}
       flex='1'>
       <Flex
         flexDirection='row'
         flexWrap='nowrap'
         justifyContent='space-around'
-        mb={2}>
-        <Icon name={channelsMapping[status].icon} size='40' />
-        <Text fontSize={[2, 3, 4]} fontWeight='bold'>
+        my={2}>
+        <Icon name={channelsMapping[status].icon} size='20' />
+        <Text fontSize={['11px', '12px', '13px']} fontWeight='bold'>
           {capitalize(status)}
         </Text>
         <Link
           href={`https://goerli.etherscan.io/tx/${tx}#eventlog`}
           target='_blank'>
-          <LinkIcon color='white' size='40' />
+          <LinkIcon color='white' size='20' />
         </Link>
       </Flex>
-      <Table color='white'>
-        <thead>
+      <Table color='white' boxShadow='none' border='none'>
+        <thead style={{ fontSize: '10px' }}>
           <tr>
-            <th>Closed by</th>
             <th>Address</th>
             <th>Settled Amount</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>{closedBy === participants[0] ? '>' : ''}</td>
-            <td>{participants[0]}</td>
-            <td>{settled_amounts ? settled_amounts[0] : ''}</td>
+            <td>
+              <AddressLink
+                address={participants[0]}
+                hasClosed={closedBy && closedBy === participants[0]}
+              />
+            </td>
+            <td>
+              <Text fontSize={['9px', '10px', '12px']}>
+                {settled_amounts
+                  ? friendlyAmountFormat(settled_amounts[0])
+                  : ''}
+              </Text>
+            </td>
           </tr>
           <tr>
-            <td>{closedBy === participants[1] ? '>' : ''}</td>
-            <td>{participants[1]}</td>
-            <td>{settled_amounts ? settled_amounts[1] : ''}</td>
+            <td>
+              <AddressLink
+                address={participants[1]}
+                hasClosed={closedBy && closedBy === participants[1]}
+              />
+            </td>
+            <td>
+              <Text fontSize={['9px', '10px', '12px']}>
+                {settled_amounts
+                  ? friendlyAmountFormat(settled_amounts[1])
+                  : ''}
+              </Text>
+            </td>
           </tr>
         </tbody>
       </Table>

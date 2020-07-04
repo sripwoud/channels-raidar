@@ -62,7 +62,7 @@ const queriesOne = (addressFilter: string) => {
     all: gql`
       {
         channels(
-          where: { participants_contains: [${addressFilter}] }
+          where: { participants_contains: ["${addressFilter}"] }
           orderBy: openedAtBlock
           orderDirection: desc
         ) {
@@ -70,7 +70,7 @@ const queriesOne = (addressFilter: string) => {
           tx
           participants
           closedBy
-          settle_amounts
+          settled_amounts
         }
       }
     `,
@@ -79,7 +79,7 @@ const queriesOne = (addressFilter: string) => {
         channels(
           where: {
             status: open,
-            participants_contains: [${addressFilter}]
+            participants_contains: ["${addressFilter}"]
           }
           orderBy: openedAtBlock
           orderDirection: desc
@@ -95,7 +95,7 @@ const queriesOne = (addressFilter: string) => {
         channels(
           where: {
             status: closed
-            participants_contains: [${addressFilter}]
+            participants_contains: ["${addressFilter}"]
           }
           orderBy: openedAtBlock
           orderDirection: desc
@@ -112,7 +112,7 @@ const queriesOne = (addressFilter: string) => {
         channels(
           where: {
             status: settled
-            participants_contains: [${addressFilter}]
+            participants_contains: ["${addressFilter}"]
           }
           orderBy: openedAtBlock
           orderDirection: desc
