@@ -21,7 +21,7 @@ Monitoring of [Raiden Network](https://raiden.network/) Payment Channels.
 - [ ] Provide tests
 
 ### Additional
-- [x] Query smart contract state history using a [The Graph](https://thegraph.com/)'s subgraph
+- [x] Query smart contract state history using a [The Graph](https://thegraph.com/)'s [subgraph](https://thegraph.com/explorer/subgraph/r1oga/raiden-channels)
 - [x] Filter by channel state (open, closed, settled)
 - [ ] Filter by channel's participant address
 
