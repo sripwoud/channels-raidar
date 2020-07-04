@@ -20,7 +20,7 @@ export const Channel = ({
   return (
     <Card
       borderRadius='4px'
-      maxWidth='790px'
+      maxWidth='820px'
       mb={2}
       bg={ChannelFilter[status]}
       color='white'
