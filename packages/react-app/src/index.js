@@ -4,10 +4,25 @@ import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from '@apollo/react-hooks'
 import { StoreProvider } from 'easy-peasy'
 import { Web3ReactProvider } from '@web3-react/core'
+import { theme } from 'rimble-ui'
+import { ThemeProvider } from 'styled-components'
 import * as ethers from 'ethers'
 import './index.css'
 import App from './App'
 import store from './store'
+import { ChannelFilter } from './constants'
+
+const customTheme = {
+  fonts: { serif: 'monospace', sansSerif: 'monospace' },
+  colors: {
+    ...theme.colors,
+    primary: '#00D0F6',
+    text: '#000',
+    [ChannelFilter.open]: '#009CB9',
+    [ChannelFilter.closed]: '#00687B',
+    [ChannelFilter.settled]: '#00343E'
+  }
+}
 
 // You should replace this uri with your own and put it into a .env file
 // See all subgraphs: https://thegraph.com/explorer/
@@ -25,7 +40,9 @@ ReactDOM.render(
   <ApolloProvider client={client}>
     <StoreProvider store={store}>
       <Web3ReactProvider getLibrary={getLibrary}>
-        <App />
+        <ThemeProvider theme={Object.assign({}, theme, customTheme)}>
+          <App />
+        </ThemeProvider>
       </Web3ReactProvider>
     </StoreProvider>
   </ApolloProvider>,
