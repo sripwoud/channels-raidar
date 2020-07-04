@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Field, Select } from 'rimble-ui'
+import { Field, Select, Text } from 'rimble-ui'
 import { useStoreActions, useStoreState } from 'easy-peasy'
 import { useQuery } from '@apollo/react-hooks'
 import { useWeb3React } from '@web3-react/core'
@@ -48,7 +48,9 @@ export const Form = () => {
           onChange={event => setChannelFilter(event.target.value)}
         />
       </Field>
-      <p>{channels.length}</p>
+      <Text color='white' fontWeight='bold' mb={2}>
+        {channels.length}
+      </Text>
     </>
   )
 }

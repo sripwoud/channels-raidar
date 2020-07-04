@@ -5,9 +5,9 @@ import { ChannelFilter } from '../constants'
 import { capitalize } from '../helpers'
 
 const channelsMapping = {
-  [ChannelFilter.open]: { color: '#6D8CC8', icon: 'LockOpen' },
-  [ChannelFilter.closed]: { color: '#5784DE', icon: 'LockOutline' },
-  [ChannelFilter.settled]: { color: '#131C5F', icon: 'Gavel' }
+  [ChannelFilter.open]: { icon: 'LockOpen' },
+  [ChannelFilter.closed]: { icon: 'LockOutline' },
+  [ChannelFilter.settled]: { icon: 'Gavel' }
 }
 
 export const Channel = ({
@@ -19,7 +19,10 @@ export const Channel = ({
 }) => {
   return (
     <Card
-      bg={channelsMapping[status].color}
+      borderRadius='4px'
+      maxWidth='790px'
+      mb={2}
+      bg={ChannelFilter[status]}
       color='white'
       fontSize={[1, 2, 3]}
       flex='1'>

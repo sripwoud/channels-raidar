@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Link, Text, Box, EthAddress, Heading } from 'rimble-ui'
+import { Link, Text, Box, EthAddress, Heading, Image } from 'rimble-ui'
 import { useWeb3React } from '@web3-react/core'
 import { InjectedConnector } from '@web3-react/injected-connector'
 import ConnectionBanner from '@rimble/connection-banner'
@@ -57,6 +57,7 @@ export const Header = props => {
   return (
     <>
       <Box
+        color='#fff'
         alignItems='center'
         justifyContent='center'
         BoxDirection='column'
@@ -73,10 +74,12 @@ export const Header = props => {
           GitHub
         </Link>
       </Box>
-      <Heading as='h1' my={2}>
+      <Heading as='h1' my={2} color='#fff'>
+        <Image alt='raiden logo' src='rdn.png' height='30' mr={3} />
         CHANNELS RAIDAR
+        <Image alt='raiden logo' src='rdn.png' height='30' ml={3} />
       </Heading>
-      <Text fontSize={3}>
+      <Text fontSize={3} color='white' mb={2}>
         Monitoring of
         <Link
           fontSize='inherit'
