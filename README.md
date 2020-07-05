@@ -96,11 +96,24 @@ Deploys the subgraph to the official Graph Node.
 Replace `r1oga/channels-raiden` in the package.json script with your subgraph's name.  
 You may also want to [read more about the hosted service](https://thegraph.com/docs/quick-start#hosted-service).
 
-### Heroku deployment
-#### `yarn deploy`
+## Local Smart Contracts development
+For development purposes, I had to be able to trigger events manually.
+As I don't own any [CustomTokens]((https://goerli.etherscan.io/address/0x59105441977ecd9d805a4f5b060e34676f50f806)), I had to deploy my own contracts locally ([TokenNetwork](./packages/contracts/contracts/TokenNetwork.sol) and [SecretRegistry](./packages/contracts/contracts/SecretRegistry.sol)) and send transactions manually.  
 
+In `packages/contracts`:
+- ` yarn install`: will install OpenZeppelin SDK
+- [commands](https://docs.openzeppelin.com/cli/2.8/commands):
+  - `npx oz compile`: will compile contracts in [packages/contracts/contracts](./packages/contracts/contracts) and store ABIs in [/abis](./packages/contracts/src/abis)
+  - `npx oz deploy`
+  - `npx oz send-tx`
+
+```
+packages/contracts $ yarn install # will install OpenZeppeling SDK
+packages/contracts $ npx oz compile # Compile contracts
+```
 ## Ressources
 
+- [Open Zeppelin SDK]https://openzeppelin.com/sdk/): the Ultimate Smart Contract Toolkit
 - [Create Eth App](https://github.com/paulrberg/create-eth-app) by [PaulRBerg](https://github.com/paulrberg)
 - [Rimble UI](https://rimble.consensys.design/): open-source React component library for dApps
 - [Easy Peasy](https://easy-peasy.now.sh/): Vegetarian friendly state for React 
