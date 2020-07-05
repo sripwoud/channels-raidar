@@ -70,9 +70,9 @@ export const Form = () => {
           <select
             required
             onChange={event => setChannelFilter(event.target.value)}>
-            {Object.keys(ChannelFilter).map(channelFilter => {
+            {Object.keys(ChannelFilter).map((channelFilter, index) => {
               return (
-                <option value={channelFilter}>
+                <option key={index} value={channelFilter}>
                   {capitalize(channelFilter)}
                 </option>
               )
