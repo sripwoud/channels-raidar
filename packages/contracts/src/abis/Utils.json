@@ -1,0 +1,383 @@
+{
+  "fileName": "Utils.sol",
+  "contractName": "Utils",
+  "source": "pragma solidity 0.6.4;\n\n/// @title Utils\n/// @notice Utils contract for various helpers used by the Raiden Network smart\n/// contracts.\ncontract Utils {\n    enum MessageTypeId {\n        None,\n        BalanceProof,\n        BalanceProofUpdate,\n        Withdraw,\n        CooperativeSettle,\n        IOU,\n        MSReward\n    }\n\n    /// @notice Check if a contract exists\n    /// @param contract_address The address to check whether a contract is\n    /// deployed or not\n    /// @return True if a contract exists, false otherwise\n    function contractExists(address contract_address) public view returns (bool) {\n        uint size;\n\n        assembly { // solium-disable-line security/no-inline-assembly\n            size := extcodesize(contract_address)\n        }\n\n        return size > 0;\n    }\n}",
+  "sourcePath": "contracts/Utils.sol",
+  "sourceMap": "136:655:8:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;136:655:8;;;;;;;",
+  "deployedSourceMap": "136:655:8:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;136:655:8;;;;;;;;;;;;;;;;12:1:-1;9;2:12;529:260:8;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;529:260:8;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;600:4;616:9;730:16;718:29;710:37;;781:1;774:4;:8;767:15;;;529:260;;;:::o",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "contract_address",
+          "type": "address"
+        }
+      ],
+      "name": "contractExists",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "ast": {
+    "absolutePath": "contracts/Utils.sol",
+    "exportedSymbols": {
+      "Utils": [
+        3761
+      ]
+    },
+    "id": 3762,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3734,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:8"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 3735,
+          "nodeType": "StructuredDocumentation",
+          "src": "24:112:8",
+          "text": "@title Utils\n @notice Utils contract for various helpers used by the Raiden Network smart\n contracts."
+        },
+        "fullyImplemented": true,
+        "id": 3761,
+        "linearizedBaseContracts": [
+          3761
+        ],
+        "name": "Utils",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Utils.MessageTypeId",
+            "id": 3743,
+            "members": [
+              {
+                "id": 3736,
+                "name": "None",
+                "nodeType": "EnumValue",
+                "src": "186:4:8"
+              },
+              {
+                "id": 3737,
+                "name": "BalanceProof",
+                "nodeType": "EnumValue",
+                "src": "200:12:8"
+              },
+              {
+                "id": 3738,
+                "name": "BalanceProofUpdate",
+                "nodeType": "EnumValue",
+                "src": "222:18:8"
+              },
+              {
+                "id": 3739,
+                "name": "Withdraw",
+                "nodeType": "EnumValue",
+                "src": "250:8:8"
+              },
+              {
+                "id": 3740,
+                "name": "CooperativeSettle",
+                "nodeType": "EnumValue",
+                "src": "268:17:8"
+              },
+              {
+                "id": 3741,
+                "name": "IOU",
+                "nodeType": "EnumValue",
+                "src": "295:3:8"
+              },
+              {
+                "id": 3742,
+                "name": "MSReward",
+                "nodeType": "EnumValue",
+                "src": "308:8:8"
+              }
+            ],
+            "name": "MessageTypeId",
+            "nodeType": "EnumDefinition",
+            "src": "157:165:8"
+          },
+          {
+            "body": {
+              "id": 3759,
+              "nodeType": "Block",
+              "src": "606:183:8",
+              "statements": [
+                {
+                  "assignments": [
+                    3752
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 3752,
+                      "name": "size",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 3759,
+                      "src": "616:9:8",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 3751,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "616:4:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 3753,
+                  "initialValue": null,
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "616:9:8"
+                },
+                {
+                  "AST": {
+                    "nodeType": "YulBlock",
+                    "src": "645:112:8",
+                    "statements": [
+                      {
+                        "nodeType": "YulAssignment",
+                        "src": "710:37:8",
+                        "value": {
+                          "arguments": [
+                            {
+                              "name": "contract_address",
+                              "nodeType": "YulIdentifier",
+                              "src": "730:16:8"
+                            }
+                          ],
+                          "functionName": {
+                            "name": "extcodesize",
+                            "nodeType": "YulIdentifier",
+                            "src": "718:11:8"
+                          },
+                          "nodeType": "YulFunctionCall",
+                          "src": "718:29:8"
+                        },
+                        "variableNames": [
+                          {
+                            "name": "size",
+                            "nodeType": "YulIdentifier",
+                            "src": "710:4:8"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "evmVersion": "petersburg",
+                  "externalReferences": [
+                    {
+                      "declaration": 3746,
+                      "isOffset": false,
+                      "isSlot": false,
+                      "src": "730:16:8",
+                      "valueSize": 1
+                    },
+                    {
+                      "declaration": 3752,
+                      "isOffset": false,
+                      "isSlot": false,
+                      "src": "710:4:8",
+                      "valueSize": 1
+                    }
+                  ],
+                  "id": 3754,
+                  "nodeType": "InlineAssembly",
+                  "src": "636:121:8"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 3757,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 3755,
+                      "name": "size",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3752,
+                      "src": "774:4:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 3756,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "781:1:8",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "774:8:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 3750,
+                  "id": 3758,
+                  "nodeType": "Return",
+                  "src": "767:15:8"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 3744,
+              "nodeType": "StructuredDocumentation",
+              "src": "328:196:8",
+              "text": "@notice Check if a contract exists\n @param contract_address The address to check whether a contract is\n deployed or not\n @return True if a contract exists, false otherwise"
+            },
+            "functionSelector": "7709bc78",
+            "id": 3760,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "contractExists",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 3747,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3746,
+                  "name": "contract_address",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3760,
+                  "src": "553:24:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3745,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "553:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "552:26:8"
+            },
+            "returnParameters": {
+              "id": 3750,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3749,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3760,
+                  "src": "600:4:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3748,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "600:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "599:6:8"
+            },
+            "scope": 3761,
+            "src": "529:260:8",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 3762,
+        "src": "136:655:8"
+      }
+    ],
+    "src": "0:791:8"
+  },
+  "bytecode": "0x608060405234801561001057600080fd5b5060cf8061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80637709bc7814602d575b600080fd5b606c60048036036020811015604157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506086565b604051808215151515815260200191505060405180910390f35b600080823b90506000811191505091905056fea2646970667358221220cc3fb561c9fb934bea377e70b5fb07b2bba8669d545b8dab2ba5fa5f7df6273b64736f6c63430006040033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80637709bc7814602d575b600080fd5b606c60048036036020811015604157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506086565b604051808215151515815260200191505060405180910390f35b600080823b90506000811191505091905056fea2646970667358221220cc3fb561c9fb934bea377e70b5fb07b2bba8669d545b8dab2ba5fa5f7df6273b64736f6c63430006040033",
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.4+commit.1dca32f3.Emscripten.clang",
+    "optimizer": {
+      "enabled": false,
+      "runs": 200
+    },
+    "evmVersion": "petersburg"
+  }
+}
