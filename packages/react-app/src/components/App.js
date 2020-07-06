@@ -8,6 +8,7 @@ import { Layout } from './Layout'
 import { Channel } from './Channel'
 import { Form } from './Form'
 import { EventToast } from './EventToast'
+import { Scroll } from './Scroll'
 import './App.css'
 
 const { ethereum } = window
@@ -64,15 +65,17 @@ export default () => {
       <Layout>
         <Form />
         <EventToast />
-        <Flex flexWrap='wrap' justifyContent='space-around'>
-          {channels ? (
-            channels.map((channel, index) => (
-              <Channel key={index} {...channel} />
-            ))
-          ) : (
-            <> </>
-          )}
-        </Flex>
+        <Scroll>
+          <Flex flexWrap='wrap' justifyContent='space-around'>
+            {channels ? (
+              channels.map((channel, index) => (
+                <Channel key={index} {...channel} />
+              ))
+            ) : (
+              <> </>
+            )}
+          </Flex>
+        </Scroll>
       </Layout>
     </div>
   )
