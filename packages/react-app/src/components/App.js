@@ -4,10 +4,10 @@ import { useStoreState } from 'easy-peasy'
 import { useWeb3React } from '@web3-react/core'
 import { InjectedConnector } from '@web3-react/injected-connector'
 
-import { Layout } from './components/Layout'
-import { Channel } from './components/Channel'
-import { Form } from './components/Form'
-import { EventToast } from './components/EventToast'
+import { Layout } from './Layout'
+import { Channel } from './Channel'
+import { Form } from './Form'
+import { EventToast } from './EventToast'
 import './App.css'
 
 const { ethereum } = window

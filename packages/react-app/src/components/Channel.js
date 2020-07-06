@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, Link, Icon, Flex, Text, Table } from 'rimble-ui'
 import { InsertLink as LinkIcon } from '@rimble/icons'
-import { ChannelFilter } from '../constants'
+import { ChannelFilter } from '../lib/constants'
 import { capitalize, friendlyAmountFormat } from '../helpers'
 import { AddressLink } from './AddressLink'
 
