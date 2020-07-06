@@ -4,8 +4,8 @@ import { useStoreActions, useStoreState } from 'easy-peasy'
 import { useQuery } from '@apollo/react-hooks'
 import { useWeb3React } from '@web3-react/core'
 import { capitalize } from '../helpers'
-import { queries } from '../queries'
-import { ChannelFilter } from '../constants'
+import { queries } from '../lib/queries'
+import { ChannelFilter } from '../lib/constants'
 
 export const Form = () => {
   const { account } = useWeb3React()

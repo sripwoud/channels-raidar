@@ -8,9 +8,9 @@ import { theme } from 'rimble-ui'
 import { ThemeProvider } from 'styled-components'
 import * as ethers from 'ethers'
 import './index.css'
-import App from './App'
+import App from './components/App'
 import store from './store'
-import { ChannelFilter } from './constants'
+import { ChannelFilter } from './lib/constants'
 
 const customTheme = {
   fonts: { serif: 'monospace', sansSerif: 'monospace' },
