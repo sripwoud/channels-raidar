@@ -3,8 +3,8 @@
   "contractName": "Utils",
   "source": "pragma solidity 0.6.4;\n\n/// @title Utils\n/// @notice Utils contract for various helpers used by the Raiden Network smart\n/// contracts.\ncontract Utils {\n    enum MessageTypeId {\n        None,\n        BalanceProof,\n        BalanceProofUpdate,\n        Withdraw,\n        CooperativeSettle,\n        IOU,\n        MSReward\n    }\n\n    /// @notice Check if a contract exists\n    /// @param contract_address The address to check whether a contract is\n    /// deployed or not\n    /// @return True if a contract exists, false otherwise\n    function contractExists(address contract_address) public view returns (bool) {\n        uint size;\n\n        assembly { // solium-disable-line security/no-inline-assembly\n            size := extcodesize(contract_address)\n        }\n\n        return size > 0;\n    }\n}",
   "sourcePath": "contracts/Utils.sol",
-  "sourceMap": "136:655:8:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;136:655:8;;;;;;;",
-  "deployedSourceMap": "136:655:8:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;136:655:8;;;;;;;;;;;;;;;;12:1:-1;9;2:12;529:260:8;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;529:260:8;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;600:4;616:9;730:16;718:29;710:37;;781:1;774:4;:8;767:15;;;529:260;;;:::o",
+  "sourceMap": "136:655:9:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;136:655:9;;;;;;;",
+  "deployedSourceMap": "136:655:9:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;136:655:9;;;;;;;;;;;;;;;;12:1:-1;9;2:12;529:260:9;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;529:260:9;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;600:4;616:9;730:16;718:29;710:37;;781:1;774:4;:8;767:15;;;529:260;;;:::o",
   "abi": [
     {
       "inputs": [
@@ -30,21 +30,21 @@
     "absolutePath": "contracts/Utils.sol",
     "exportedSymbols": {
       "Utils": [
-        3761
+        3802
       ]
     },
-    "id": 3762,
+    "id": 3803,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3734,
+        "id": 3775,
         "literals": [
           "solidity",
           "0.6",
           ".4"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:22:8"
+        "src": "0:22:9"
       },
       {
         "abstract": false,
@@ -52,89 +52,89 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 3735,
+          "id": 3776,
           "nodeType": "StructuredDocumentation",
-          "src": "24:112:8",
+          "src": "24:112:9",
           "text": "@title Utils\n @notice Utils contract for various helpers used by the Raiden Network smart\n contracts."
         },
         "fullyImplemented": true,
-        "id": 3761,
+        "id": 3802,
         "linearizedBaseContracts": [
-          3761
+          3802
         ],
         "name": "Utils",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Utils.MessageTypeId",
-            "id": 3743,
+            "id": 3784,
             "members": [
               {
-                "id": 3736,
+                "id": 3777,
                 "name": "None",
                 "nodeType": "EnumValue",
-                "src": "186:4:8"
+                "src": "186:4:9"
               },
               {
-                "id": 3737,
+                "id": 3778,
                 "name": "BalanceProof",
                 "nodeType": "EnumValue",
-                "src": "200:12:8"
+                "src": "200:12:9"
               },
               {
-                "id": 3738,
+                "id": 3779,
                 "name": "BalanceProofUpdate",
                 "nodeType": "EnumValue",
-                "src": "222:18:8"
+                "src": "222:18:9"
               },
               {
-                "id": 3739,
+                "id": 3780,
                 "name": "Withdraw",
                 "nodeType": "EnumValue",
-                "src": "250:8:8"
+                "src": "250:8:9"
               },
               {
-                "id": 3740,
+                "id": 3781,
                 "name": "CooperativeSettle",
                 "nodeType": "EnumValue",
-                "src": "268:17:8"
+                "src": "268:17:9"
               },
               {
-                "id": 3741,
+                "id": 3782,
                 "name": "IOU",
                 "nodeType": "EnumValue",
-                "src": "295:3:8"
+                "src": "295:3:9"
               },
               {
-                "id": 3742,
+                "id": 3783,
                 "name": "MSReward",
                 "nodeType": "EnumValue",
-                "src": "308:8:8"
+                "src": "308:8:9"
               }
             ],
             "name": "MessageTypeId",
             "nodeType": "EnumDefinition",
-            "src": "157:165:8"
+            "src": "157:165:9"
           },
           {
             "body": {
-              "id": 3759,
+              "id": 3800,
               "nodeType": "Block",
-              "src": "606:183:8",
+              "src": "606:183:9",
               "statements": [
                 {
                   "assignments": [
-                    3752
+                    3793
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 3752,
+                      "id": 3793,
                       "name": "size",
                       "nodeType": "VariableDeclaration",
                       "overrides": null,
-                      "scope": 3759,
-                      "src": "616:9:8",
+                      "scope": 3800,
+                      "src": "616:9:9",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -142,10 +142,10 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 3751,
+                        "id": 3792,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
-                        "src": "616:4:8",
+                        "src": "616:4:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -155,40 +155,40 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 3753,
+                  "id": 3794,
                   "initialValue": null,
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "616:9:8"
+                  "src": "616:9:9"
                 },
                 {
                   "AST": {
                     "nodeType": "YulBlock",
-                    "src": "645:112:8",
+                    "src": "645:112:9",
                     "statements": [
                       {
                         "nodeType": "YulAssignment",
-                        "src": "710:37:8",
+                        "src": "710:37:9",
                         "value": {
                           "arguments": [
                             {
                               "name": "contract_address",
                               "nodeType": "YulIdentifier",
-                              "src": "730:16:8"
+                              "src": "730:16:9"
                             }
                           ],
                           "functionName": {
                             "name": "extcodesize",
                             "nodeType": "YulIdentifier",
-                            "src": "718:11:8"
+                            "src": "718:11:9"
                           },
                           "nodeType": "YulFunctionCall",
-                          "src": "718:29:8"
+                          "src": "718:29:9"
                         },
                         "variableNames": [
                           {
                             "name": "size",
                             "nodeType": "YulIdentifier",
-                            "src": "710:4:8"
+                            "src": "710:4:9"
                           }
                         ]
                       }
@@ -197,23 +197,23 @@
                   "evmVersion": "petersburg",
                   "externalReferences": [
                     {
-                      "declaration": 3746,
+                      "declaration": 3787,
                       "isOffset": false,
                       "isSlot": false,
-                      "src": "730:16:8",
+                      "src": "730:16:9",
                       "valueSize": 1
                     },
                     {
-                      "declaration": 3752,
+                      "declaration": 3793,
                       "isOffset": false,
                       "isSlot": false,
-                      "src": "710:4:8",
+                      "src": "710:4:9",
                       "valueSize": 1
                     }
                   ],
-                  "id": 3754,
+                  "id": 3795,
                   "nodeType": "InlineAssembly",
-                  "src": "636:121:8"
+                  "src": "636:121:9"
                 },
                 {
                   "expression": {
@@ -222,19 +222,19 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 3757,
+                    "id": 3798,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 3755,
+                      "id": 3796,
                       "name": "size",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3752,
-                      "src": "774:4:8",
+                      "referencedDeclaration": 3793,
+                      "src": "774:4:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -245,14 +245,14 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 3756,
+                      "id": 3797,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "781:1:8",
+                      "src": "781:1:9",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_0_by_1",
@@ -260,27 +260,27 @@
                       },
                       "value": "0"
                     },
-                    "src": "774:8:8",
+                    "src": "774:8:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 3750,
-                  "id": 3758,
+                  "functionReturnParameters": 3791,
+                  "id": 3799,
                   "nodeType": "Return",
-                  "src": "767:15:8"
+                  "src": "767:15:9"
                 }
               ]
             },
             "documentation": {
-              "id": 3744,
+              "id": 3785,
               "nodeType": "StructuredDocumentation",
-              "src": "328:196:8",
+              "src": "328:196:9",
               "text": "@notice Check if a contract exists\n @param contract_address The address to check whether a contract is\n deployed or not\n @return True if a contract exists, false otherwise"
             },
             "functionSelector": "7709bc78",
-            "id": 3760,
+            "id": 3801,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -288,17 +288,17 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 3747,
+              "id": 3788,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3746,
+                  "id": 3787,
                   "name": "contract_address",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 3760,
-                  "src": "553:24:8",
+                  "scope": 3801,
+                  "src": "553:24:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -306,10 +306,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3745,
+                    "id": 3786,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "553:7:8",
+                    "src": "553:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -320,20 +320,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "552:26:8"
+              "src": "552:26:9"
             },
             "returnParameters": {
-              "id": 3750,
+              "id": 3791,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3749,
+                  "id": 3790,
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 3760,
-                  "src": "600:4:8",
+                  "scope": 3801,
+                  "src": "600:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -341,10 +341,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3748,
+                    "id": 3789,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "600:4:8",
+                    "src": "600:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -354,20 +354,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "599:6:8"
+              "src": "599:6:9"
             },
-            "scope": 3761,
-            "src": "529:260:8",
+            "scope": 3802,
+            "src": "529:260:9",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 3762,
-        "src": "136:655:8"
+        "scope": 3803,
+        "src": "136:655:9"
       }
     ],
-    "src": "0:791:8"
+    "src": "0:791:9"
   },
   "bytecode": "0x608060405234801561001057600080fd5b5060cf8061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80637709bc7814602d575b600080fd5b606c60048036036020811015604157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506086565b604051808215151515815260200191505060405180910390f35b600080823b90506000811191505091905056fea2646970667358221220cc3fb561c9fb934bea377e70b5fb07b2bba8669d545b8dab2ba5fa5f7df6273b64736f6c63430006040033",
   "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80637709bc7814602d575b600080fd5b606c60048036036020811015604157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506086565b604051808215151515815260200191505060405180910390f35b600080823b90506000811191505091905056fea2646970667358221220cc3fb561c9fb934bea377e70b5fb07b2bba8669d545b8dab2ba5fa5f7df6273b64736f6c63430006040033",
