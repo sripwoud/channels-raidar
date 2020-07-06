@@ -1,5 +1,5 @@
 import { createStore, action } from 'easy-peasy'
-import { queries } from './queries'
+import { queries } from './lib/queries'
 export default createStore({
   channels: {
     data: [],
