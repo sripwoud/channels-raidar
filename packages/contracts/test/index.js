@@ -1,13 +1,11 @@
 const ethers = require('ethers')
-const { setupLoader } = require('@openzeppelin/contract-loader')
+const { provider } = require('./signer')
 const tokenNetworkAbi = require('../src/abis/TokenNetwork.json')
 const erc20Abi = require('../src/abis/CustomToken.json')
 const secretRegistryAbi = require('../src/abis/SecretRegistry.json')
 
-const provider = new ethers.providers.JsonRpcProvider()
 const signer = provider.getSigner()
-
-async function main() {
+;(async () => {
   try {
     const accounts = await provider.listAccounts()
 
@@ -64,7 +62,7 @@ async function main() {
     console.log()
 
     // Open a Channel
-    tokenNetworkContract.on('ChannelOpened', event =>
+    tokenNetworkContract.once('ChannelOpened', event =>
       console.log('Event listener: a Channel was opened!')
     )
 
@@ -86,6 +84,4 @@ async function main() {
   } catch (error) {
     console.error(error)
   }
-}
-
-main()
+})()
