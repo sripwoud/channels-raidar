@@ -1,0 +1,51 @@
+{
+  "contracts": {},
+  "solidityLibs": {},
+  "proxies": {
+    "@openzeppelin/contracts-ethereum-package/ERC20PresetMinterPauserUpgradeSafe": [
+      {
+        "address": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+        "kind": "NonProxy",
+        "bytecodeHash": "52be0b883a223d287defa9bdaccdf9070af147d6b45366a9e8996d4b698512af"
+      },
+      {
+        "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+        "kind": "NonProxy",
+        "bytecodeHash": "52be0b883a223d287defa9bdaccdf9070af147d6b45366a9e8996d4b698512af"
+      },
+      {
+        "address": "0xA57B8a5584442B467b4689F1144D269d096A3daF",
+        "version": "3.0.0",
+        "implementation": "0x59d3631c86BbE35EF041872d502F218A39FBa150",
+        "admin": "0x2612Af3A521c2df9EAF28422Ca335b04AdF3ac66",
+        "kind": "Upgradeable"
+      }
+    ],
+    "@project/contracts/SecretRegistry": [
+      {
+        "address": "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24",
+        "kind": "NonProxy",
+        "bytecodeHash": "6b65f3ef1767340dd1c00240f4b9b25602497f9a2a7be6e98b255407ff38884e"
+      }
+    ],
+    "@project/contracts/TokenNetwork": [
+      {
+        "address": "0x630589690929E9cdEFDeF0734717a9eF3Ec7Fcfe",
+        "kind": "NonProxy",
+        "bytecodeHash": "76ce2771604a6a661327491f427d9680914f1fc4be9cd8c1965b4d8584c72702"
+      }
+    ]
+  },
+  "manifestVersion": "2.2",
+  "dependencies": {
+    "@openzeppelin/contracts-ethereum-package": {
+      "package": "0xD833215cBcc3f914bD1C9ece3EE7BF8B14f841bb",
+      "version": "3.0.0",
+      "customDeploy": true
+    }
+  },
+  "version": "1.0.0",
+  "proxyAdmin": {
+    "address": "0x2612Af3A521c2df9EAF28422Ca335b04AdF3ac66"
+  }
+}
