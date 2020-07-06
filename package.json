@@ -19,7 +19,8 @@
     "subgraph:deploy": "yarn workspace @project/subgraph deploy",
     "deploy": "git subtree push --prefix packages/react-app heroku master",
     "contracts:ganache": "yarn workspace @project/contracts ganache",
-    "contracts:test": "yarn workspace @project/contracts test"
+    "contracts:test": "yarn workspace @project/contracts test",
+    "contracts:openchannel": "yarn workspace @project/contracts openchannel"
   },
   "workspaces": {
     "packages": [
