@@ -6,7 +6,7 @@ Monitoring of [Raiden Network](https://raiden.network/) Payment Channels.
 ### [Initial](https://gist.github.com/r1oga/3d2749210a994749b57a39695fdf81e9)
 - [x] Observe and list the `ChannelOpened`, `ChannelClosed` and `ChannelSettled` events emitted by the smart contract
 - [x] Keep a list of the open raiden channels
-- [ ] List should update as new events are observed
+- [x] List should update as new events are observed
 - [x] Write either in TypeScript or JavaScript
 - [x] Use any of the following frameworks: ~~Vue.js~~, React, ~~Angular~~
 - [ ] Build using a testable architecture
@@ -16,7 +16,7 @@ Monitoring of [Raiden Network](https://raiden.network/) Payment Channels.
 ### Additional
 - [x] Query smart contract state history using a [The Graph](https://thegraph.com/)'s [subgraph](https://thegraph.com/explorer/subgraph/r1oga/raiden-channels)
 - [x] Filter by channel state (open, closed, settled)
-- [ ] Filter by channel's participant address
+- [x] Filter by channel's participant address
 
 ## Project structure
 This project is made of 3 packages:
