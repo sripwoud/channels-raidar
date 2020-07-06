@@ -1,7 +1,12 @@
 {
   "manifestVersion": "2.2",
-  "contracts": {},
-  "dependencies": {},
+  "contracts": {
+    "TokenNetwork": "TokenNetwork",
+    "SecretRegistry": "SecretRegistry"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts-ethereum-package": "^3.0.0"
+  },
   "name": "@project/contracts",
   "version": "1.0.0",
   "compiler": {

@@ -1,8 +1,8 @@
-import tttNetworkAbi from './abis/tttNetwork.json'
-import tttErc20Abi from './abis/tttErc20.json'
+import TokenNetworkAbi from './abis/TokenNetwork.json'
+import tttErc20Abi from './abisBackup/tttErc20.json'
 
 const abis = {
-  tttNetwork: tttNetworkAbi,
+  tttNetwork: TokenNetworkAbi.abi,
   tttErc20: tttErc20Abi
 }
 
