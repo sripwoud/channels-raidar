@@ -31,7 +31,7 @@ Your app is ready to be deployed!
 
 See the React documentation on [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn react-app:eject`
+### `yarn eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 

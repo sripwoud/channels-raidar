@@ -1,6 +1,7 @@
 ## @project/subgraph
 
-The Graph is a tool for for indexing events emitted on the Ethereum blockchain. It provides you with an easy-to-use GraphQL API.
+The Graph is a tool for for indexing events emitted on the Ethereum blockchain. It provides you with an easy-to-use GraphQL API.  
+[Deployed Raiden Channels Subgraph](https://thegraph.com/explorer/subgraph/r1oga/raiden-channels)
 
 ## Available Scripts
 
