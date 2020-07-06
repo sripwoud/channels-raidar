@@ -28,7 +28,7 @@ Indeed upon reading the [TokenNetwork.sol](https://github.com/raiden-network/rai
 
 A main limitation with option 2 is that I don't own any [CustomTokens](https://goerli.etherscan.io/address/0x59105441977ecd9d805a4f5b060e34676f50f806) so I won't be able to test other functionalities like exchanging tokens then closing and settling a channel.  
 
-For this reason and for the sake of the challenge, **I decided to try option 3 instead**.  
+For this reason and for the sake of the challenge, **I decided to try option 3 as well**.  
 
 First, install openzeppeling SDK with `yarn install`. Then either one decides to use the interactive cli or to interact with the contract programatically.
 ### With [OpenZeppelin interactive CLI](https://docs.openzeppelin.com/cli/2.8/commands)
