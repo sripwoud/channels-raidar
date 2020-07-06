@@ -16,7 +16,7 @@ export function useContract() {
 
       // load contractWithSigner
       const contractWithSigner = new ethers.Contract(
-        addresses.tokenNetworkLocal,
+        addresses.tttNetwork,
         abis.tttNetwork,
         signer
       )
