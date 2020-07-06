@@ -9,30 +9,6 @@ export const Header = props => {
 
   return (
     <>
-      <Box
-        color='#fff'
-        fontSize={['10px', '12px', '14px']}
-        alignItems='center'
-        justifyContent='center'
-        BoxDirection='column'
-        mt={3}>
-        Made by
-        <Link
-          fontSize='inherit'
-          href='https://twitter.com/r1oga'
-          target='__blank'
-          px={2}>
-          @r1oga
-        </Link>
-        -
-        <Link
-          fontSize='inherit'
-          href='https://github.com/r1oga/channels-raidar'
-          target='__blank'
-          px={2}>
-          GitHub
-        </Link>
-      </Box>
       <Heading as='h1' my={2} color='#fff' fontSize={[1, 3, 4]}>
         <Image
           alt='raiden logo'
