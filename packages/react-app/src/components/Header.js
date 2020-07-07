@@ -11,6 +11,7 @@ export const Header = props => {
     <>
       <Heading as='h1' my={2} color='#fff' fontSize={[1, 3, 4]}>
         <Image
+          className='raiden-logo'
           alt='raiden logo'
           src='rdn.png'
           mr={3}
@@ -18,6 +19,7 @@ export const Header = props => {
         />
         CHANNELS RAIDAR
         <Image
+          className='raiden-logo'
           alt='raiden logo'
           src='rdn.png'
           ml={3}
