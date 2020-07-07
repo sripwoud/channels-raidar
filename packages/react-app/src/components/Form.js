@@ -23,7 +23,7 @@ export const Form = () => {
   }, [loading, error, data, updateChannels])
 
   return (
-    <Flex flexWrap='wrap' justifyContent='center'>
+    <Flex flexWrap='wrap' justifyContent='center' mt={2}>
       <Box
         color='white'
         fontSize={['9px', '10px', '12px']}
