@@ -10,7 +10,7 @@ export const Footer = () => {
         alignItems='center'
         justifyContent='center'
         BoxDirection='column'
-        my={3}>
+        my={2}>
         Made by
         <Link
           fontSize='inherit'
