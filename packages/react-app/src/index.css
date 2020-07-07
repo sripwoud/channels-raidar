@@ -1,3 +1,18 @@
 body {
   font-family: monospace;
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .raiden-logo {
+    animation: raiden-logo-spin infinite 10s linear;
+  }
+}
+
+@keyframes raiden-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
