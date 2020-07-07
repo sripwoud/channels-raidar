@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card, Link, Icon, Flex, Text, Table } from 'rimble-ui'
-import { InsertLink as LinkIcon } from '@rimble/icons'
+// import { InsertLink } from '@rimble/icons'
 import { ChannelFilter } from '../lib/constants'
 import { capitalize, friendlyAmountFormat } from '../helpers'
 import { AddressLink } from './AddressLink'
@@ -39,7 +39,7 @@ export const Channel = ({
         <Link
           href={`https://goerli.etherscan.io/tx/${tx}#eventlog`}
           target='_blank'>
-          <LinkIcon color='white' size='20' />
+          <img src='link.png' height='18px' alt='link logo' />
         </Link>
       </Flex>
       <Table color='white' boxShadow='none' border='none'>

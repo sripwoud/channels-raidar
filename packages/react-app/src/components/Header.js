@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Text, Box, Heading, Image } from 'rimble-ui'
+import { Link, Text, Heading, Image } from 'rimble-ui'
 import { useWeb3React } from '@web3-react/core'
 import ConnectionBanner from '@rimble/connection-banner'
 
