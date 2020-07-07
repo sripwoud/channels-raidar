@@ -25,10 +25,6 @@ export default () => {
   const context = useWeb3React()
   const { activate, active, error } = context
 
-  if (ethereum && ethereum.on && !active && !error) {
-    activate(injected)
-  }
-
   useEffect(() => {
     if (ethereum && ethereum.on && !active && !error) {
       const handleChainChanged = chainId => {
