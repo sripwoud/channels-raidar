@@ -10,7 +10,7 @@ Monitoring of [Raiden Network](https://raiden.network/) Payment Channels.
 - [x] Write either in TypeScript or JavaScript
 - [x] Use any of the following frameworks: ~~Vue.js~~, React, ~~Angular~~
 - [ ] Build using a testable architecture
-- [x] Manage state
+- [x] Manage state (easy-peasy + use of react context and hooks)
 - [ ] Provide tests
 
 ### Additional
