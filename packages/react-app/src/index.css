@@ -2,9 +2,21 @@ body {
   font-family: monospace;
 }
 
+.scroll {
+  overflow-y: scroll;
+  border: 1px white solid;
+  height: 79vh;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .raiden-logo {
     animation: raiden-logo-spin infinite 10s linear;
+  }
+}
+
+@media (max-height: 635px), screen and (orientation: portrait) {
+  .scroll {
+    height: 63vh;
   }
 }
 
