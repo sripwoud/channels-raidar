@@ -1,12 +1,7 @@
 import React from 'react'
 import { Link, Text, Heading, Image } from 'rimble-ui'
-import { useWeb3React } from '@web3-react/core'
-import ConnectionBanner from '@rimble/connection-banner'
 
 export const Header = props => {
-  const context = useWeb3React()
-  const { chainId } = context
-
   return (
     <>
       <Heading as='h1' my={2} color='#fff' fontSize={[1, 3, 4]}>
@@ -37,7 +32,6 @@ export const Header = props => {
         </Link>
         Payment Channels
       </Text>
-      <ConnectionBanner currentNetwork={chainId} requiredNetwork={5} />
     </>
   )
 }
