@@ -23,12 +23,12 @@ export const Form = () => {
   }, [loading, error, data, updateChannels])
 
   return (
-    <Flex flexWrap='wrap' justifyContent='center' mt={2}>
+    <Flex flexWrap='wrap' justifyContent='center'>
       <Box
         color='white'
         fontSize={['9px', '10px', '12px']}
         width={[1, 1 / 2, 1 / 3]}>
-        <Field label='Address' color='white' fontSize='inherit'>
+        <Field label='Address' color='white' fontSize='inherit' my={1}>
           <select
             required
             onChange={event => {

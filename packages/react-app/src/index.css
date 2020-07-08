@@ -1,11 +1,12 @@
 body {
   font-family: monospace;
+  overflow-y: hidden;
 }
 
 .scroll {
   overflow-y: scroll;
   border: 1px white solid;
-  height: 79vh;
+  height: calc(100vh - 192px); /* - header - footer*/
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,9 +15,15 @@ body {
   }
 }
 
-@media (max-height: 635px), screen and (orientation: portrait) {
+@media screen and (min-width: 640px) and (max-width: 830px) and (orientation: portrait) {
   .scroll {
-    height: 63vh;
+    height: calc(100vh - 215px);
+  }
+}
+
+@media screen and (max-width: 640px) and (orientation: portrait) {
+  .scroll {
+    height: calc(100vh - 228px);
   }
 }
 
