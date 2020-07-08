@@ -26,7 +26,7 @@ export const Header = props => {
           height={['15', '20', '30']}
         />
       </Heading>
-      <Text fontSize={['11px', '13px', '15px']} color='white' mb={[1, 2, 3]}>
+      <Text fontSize={['11px', '13px', '15px']} color='white' mb={[0, 2, 3]}>
         Monitoring of
         <Link
           fontSize='inherit'
