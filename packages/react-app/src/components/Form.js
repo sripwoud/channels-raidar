@@ -42,7 +42,7 @@ export const Form = () => {
               }
             }}>
             <option value='all'>All</option>
-            <option value='mine'>Mine</option>
+            {account ? <option value='mine'>Mine</option> : null}
             <option value='custom'>Custom</option>
           </select>
         </Field>
