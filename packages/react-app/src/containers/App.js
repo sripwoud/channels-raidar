@@ -4,9 +4,9 @@ import { useStoreState } from 'easy-peasy'
 import { useEagerConnect, useInactiveListener } from '../hooks'
 
 import { Layout } from './Layout'
-import { Channel } from './Channel'
-import { EventToast } from './EventToast'
-import { Scroll } from './Scroll'
+import { Channel } from '../components/Channel'
+import { EventToast } from '../components/EventToast'
+import { Scroll } from '../components/Scroll'
 import './App.css'
 
 export default () => {

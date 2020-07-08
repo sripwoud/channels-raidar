@@ -4,7 +4,7 @@ import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from '@apollo/react-hooks'
 import { StoreProvider } from 'easy-peasy'
 import store from '../store'
-import App from '../components/App'
+import App from '../containers/App'
 
 const client = new ApolloClient({
   uri: 'https://api.thegraph.com/subgraphs/name/r1oga/raiden-channels'
