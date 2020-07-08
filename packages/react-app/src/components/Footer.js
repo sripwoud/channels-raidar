@@ -10,6 +10,7 @@ export const Footer = () => {
         alignItems='center'
         justifyContent='center'
         BoxDirection='column'
+        maxHeight='15px'
         my={2}>
         Made by
         <Link
