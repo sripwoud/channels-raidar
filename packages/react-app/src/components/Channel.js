@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, Link, Icon, Flex, Text, Table } from 'rimble-ui'
 // import { InsertLink } from '@rimble/icons'
 import { ChannelFilter } from '../lib/constants'
-import { capitalize, friendlyAmountFormat } from '../helpers'
+import { capitalize, friendlyAmountFormat, getEtherscanLink } from '../helpers'
 import { AddressLink } from './AddressLink'
 
 const channelsMapping = {
@@ -36,9 +36,7 @@ export const Channel = ({
         <Text fontSize={['11px', '12px', '13px']} fontWeight='bold'>
           {capitalize(status)}
         </Text>
-        <Link
-          href={`https://goerli.etherscan.io/tx/${tx}#eventlog`}
-          target='_blank'>
+        <Link href={getEtherscanLink(tx, 'event')} target='_blank'>
           <img src='link.png' height='18px' alt='link logo' />
         </Link>
       </Flex>
