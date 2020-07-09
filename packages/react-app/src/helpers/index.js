@@ -10,6 +10,8 @@ export function getEtherscanLink(data, type) {
     case 'token': {
       return `${prefix}/token/${data}`
     }
+    case 'event':
+      return `${prefix}/tx/${data}#eventlog`
     case 'address':
     default: {
       return `${prefix}/address/${data}`
