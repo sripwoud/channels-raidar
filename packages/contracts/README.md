@@ -1,16 +1,12 @@
 # @project/contracts
 
-A minimalist, opinionated structure for managing smart contract ABIs and addresses.<br/>
-
-[Read more about Application Binary Interfaces (ABIs) here](https://ethereum.stackexchange.com/questions/234/what-is-an-abi-and-why-is-it-needed-to-interact-with-contracts).
-
-## Contracts
-
 |Name|ABI|Network|Description|
 |--|--|--|--|
 |[TokenNetwork](https://goerli.etherscan.io/address/0x3EA2a1fED7FdEf300DA19E97092Ce8FdF8bf66A3)|[tttNetwork.json](./packages/contracts/src/abi/tttNetwork.json)|Goerli|Raiden Network's TokenNetwork contract for the TTT ERC-20 token
 |[CustomToken](https://goerli.etherscan.io/address/0x59105441977ecd9d805a4f5b060e34676f50f806)|[tttErc20.json](./packages/contracts/src/abi/tttErc20.json)|Goerli|ERC20 Token Contract|
 
+
+The other contracts (used for testing purposes, see below) were copied from the [raiden-network/raiden-contracts](https://github.com/raiden-network/raiden-contracts/tree/master/raiden_contracts/data/source/raiden) repository.
 ## Interact with smart contracts
 I had to watch for smart contracts events. I had several possibilities:
 1. Wait for events to be fired by the TokenNetwork contract deployed on goerli. It is obviously **not ideal** as it means I have to wait and "hope" for events to be eventually fired after other people transacted.
@@ -47,6 +43,6 @@ See more exhaustive infos about commands in [docs](https://docs.openzeppelin.com
     3. Deploy a TokenNetwork contract
     4. Open a Channel
     5. Check for ChannelOpened event emission
-3. `yarn openChannel`: opens a new channels
+3. `yarn openChannel`: opens a new channel
 
 
