@@ -9,9 +9,9 @@ Monitoring of [Raiden Network](https://raiden.network/) Payment Channels.
 - [x] List should update as new events are observed
 - [x] Write either in TypeScript or JavaScript
 - [x] Use any of the following frameworks: ~~Vue.js~~, React, ~~Angular~~
-- [ ] Build using a testable architecture
+- [x] Build using a testable architecture
 - [x] Manage state (easy-peasy + use of react context and hooks)
-- [ ] Provide tests
+- [x] Provide tests: some tests are written but of course more are to be written
 
 ### Additional
 - [x] Query smart contract state history using a [The Graph](https://thegraph.com/)'s [subgraph](https://thegraph.com/explorer/subgraph/r1oga/raiden-channels)
