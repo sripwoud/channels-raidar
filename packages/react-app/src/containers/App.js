@@ -4,12 +4,15 @@ import { useStoreState } from 'easy-peasy'
 import { useEagerConnect, useInactiveListener } from '../hooks'
 
 import { Layout } from './Layout'
+import { List } from './List'
 import { Channel } from '../components/Channel'
 import { EventToast } from '../components/EventToast'
 import { Scroll } from '../components/Scroll'
 import './App.css'
 
-export default () => {
+const ChannelsList = List(Channel)
+
+export const App = () => {
   const channels = useStoreState(state => state.channels.data)
 
   /* credit to uniswap interface
@@ -30,13 +33,7 @@ export default () => {
         <EventToast />
         <Scroll>
           <Flex flexWrap='wrap' justifyContent='space-around'>
-            {channels ? (
-              channels.map((channel, index) => (
-                <Channel key={index} {...channel} />
-              ))
-            ) : (
-              <> </>
-            )}
+            {channels ? <ChannelsList list={channels} /> : null}
           </Flex>
         </Scroll>
       </Layout>
