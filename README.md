@@ -9,9 +9,9 @@ Monitoring of [Raiden Network](https://raiden.network/) Payment Channels.
 - [x] List should update as new events are observed
 - [x] Write either in TypeScript or JavaScript
 - [x] Use any of the following frameworks: ~~Vue.js~~, React, ~~Angular~~
-- [ ] Build using a testable architecture
-- [x] Manage state
-- [ ] Provide tests
+- [x] Build using a testable architecture
+- [x] Manage state (easy-peasy + use of react context and hooks)
+- [x] Provide tests: some tests are written but of course more are to be written
 
 ### Additional
 - [x] Query smart contract state history using a [The Graph](https://thegraph.com/)'s [subgraph](https://thegraph.com/explorer/subgraph/r1oga/raiden-channels)
@@ -20,16 +20,16 @@ Monitoring of [Raiden Network](https://raiden.network/) Payment Channels.
 
 ## Project structure
 This project is made of 3 packages:
-- [contracts](./packages/contracts)  
+### [contracts](./packages/contracts)  
 Smart contracts `.sol` file, ABIs `.json` files, contracts addresses, local smart contracts development
-- [react-app](./packages/react-app)  
+### [react-app](./packages/react-app)  
 Fork of the default [create-react-app](https://github.com/facebook/create-react-app) template
-- [subgraph](./packages/subgraph)  
+### [subgraph](./packages/subgraph)  
 [The Graph](https://thegraph.com/) is a tool for for indexing events emitted on the Ethereum blockchain. It provides you with an easy-to-use GraphQL API. To learn more, check out the [The Graph documentation](https://thegraph.com/docs)  
-[**Deployed Raiden Channels Subgraph**](https://thegraph.com/explorer/subgraph/r1oga/raiden-channels)   
+[**Deployed Raiden Channels Subgraph**](https://thegraph.com/explorer/subgraph/r1oga/raiden-channels)  
 Caveat:
-  > By default query responses are **limited to 100 items per collection**. If you want to receive more, you can go up to 1000 items per collection and beyond that you can paginate.
-  See [thegraph faq](https://thegraph.com/docs/quick-start#faq)
+> By default query responses are **limited to 100 items per collection**. If you want to receive more, you can go up to 1000 items per collection and beyond that you can paginate.
+See [thegraph faq](https://thegraph.com/docs/quick-start#faq)
 ## Available Scripts
 Owing to this dependency on Yarn Workspaces, Create Eth App can't be used with npm.  
 Each script can be run either from the root folder with `yarn [package]:[script]` or from within a package folder with `yarn [script]`.
@@ -38,6 +38,7 @@ Each script can be run either from the root folder with `yarn [package]:[script]
 |--|--|--|
 |contracts|ganache|Starts a local blockchain (deterministic, goerli, port 8545) with ganache-cli.|
 |contracts|test|Deploys contracts (ERC20, SecretRegistry and TokenNetwork. Opens a channel. Watch event.|
+|contracts|openchannel|Executes the `openChannel` function of `TokenNetwork.sol` to fire an `OpenedChannel` event.|
 |react-app|start|Runs the React app in development mode at [http://localhost:3000](http://localhost:3000).|
 |react-app|test|Runs the React test watcher in an interactive mode.|
 |react-app|build|Builds the React app for production to `packages/react-app/build`.|
