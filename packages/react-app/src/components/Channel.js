@@ -1,15 +1,9 @@
 import React from 'react'
 import { Card, Link, Icon, Flex, Text, Table } from 'rimble-ui'
 // import { InsertLink } from '@rimble/icons'
-import { ChannelFilter } from '../lib/constants'
+import { ChannelFilter, channelsIcons } from '../lib/constants'
 import { capitalize, friendlyAmountFormat, getEtherscanLink } from '../helpers'
 import { AddressLink } from './AddressLink'
-
-const channelsMapping = {
-  [ChannelFilter.open]: { icon: 'LockOpen' },
-  [ChannelFilter.closed]: { icon: 'LockOutline' },
-  [ChannelFilter.settled]: { icon: 'Gavel' }
-}
 
 export const Channel = ({
   tx,
@@ -32,7 +26,7 @@ export const Channel = ({
         flexWrap='nowrap'
         justifyContent='space-around'
         my={2}>
-        <Icon name={channelsMapping[status].icon} size='20' />
+        <Icon name={channelsIcons[status].icon} size='20' />
         <Text fontSize={['11px', '12px', '13px']} fontWeight='bold'>
           {capitalize(status)}
         </Text>
