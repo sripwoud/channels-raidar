@@ -1,6 +1,6 @@
 import { createStore, action } from 'easy-peasy'
 import { queries } from './lib/queries'
-export default createStore({
+export const store = createStore({
   channels: {
     data: [],
     update: action((state, payload) => {

@@ -8,8 +8,8 @@ import { theme } from 'rimble-ui'
 import { ThemeProvider } from 'styled-components'
 import * as ethers from 'ethers'
 import './index.css'
-import App from './containers/App'
-import store from './store'
+import { App } from './containers/App'
+import { store } from './store'
 import { ChannelFilter } from './lib/constants'
 
 const customTheme = {
