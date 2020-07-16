@@ -1,6 +1,7 @@
 # Channels Raidar
 
 Monitoring of [Raiden Network](https://raiden.network/) Payment Channels.
+![screenshot](https://raw.githubusercontent.com/r1oga/portfolio-v2/master/public/img/channels-raidar.png)
 
 ## Requirements
 ### [Initial](https://gist.github.com/r1oga/3d2749210a994749b57a39695fdf81e9)
