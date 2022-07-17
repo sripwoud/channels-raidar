@@ -16,7 +16,7 @@ dataSources:
       apiVersion: 0.0.4
       abis:
         - name: tttNetwork
-          file: ../contracts/src/abis/tttNetwork.json
+          file: ../contracts/src/abis/TokenNetwork.json
       entities:
         - Channel
       eventHandlers:
