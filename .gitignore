@@ -24,3 +24,5 @@ yarn-error.log*
 packages/subgraph/build/
 packages/subgraph/src/types/
 node_modules
+
+.idea
