@@ -1,9 +1,11 @@
 # Channels Raidar
 
-Monitoring of [Raiden Network](https://raiden.network/) Payment Channels.
-![screenshot](https://raw.githubusercontent.com/r1oga/portfolio-v2/master/public/img/channels-raidar.png)
-
+Monitoring of [Raiden Network](https://raiden.network/) Payment Channels.  
+<p align="center">
+    <img width="700" alt="Screenshot 2022-07-18 at 15 53 35" src="https://user-images.githubusercontent.com/38692952/179526936-ae3ce214-6beb-4efe-801f-ce1f3e84772c.png">
+</p>
 ## Requirements
+
 ### [Initial](https://gist.github.com/r1oga/3d2749210a994749b57a39695fdf81e9)
 - [x] Observe and list the `ChannelOpened`, `ChannelClosed` and `ChannelSettled` events emitted by the smart contract
 - [x] Keep a list of the open raiden channels
