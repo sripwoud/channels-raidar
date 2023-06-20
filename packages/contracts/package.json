@@ -1,18 +1,18 @@
 {
-  "name": "@project/contracts",
+  "name": "contracts",
   "version": "1.0.0",
   "main": "./src/index.js",
-  "dependencies": {
-    "@openzeppelin/cli": "^2.8.2",
-    "@openzeppelin/contract-loader": "^0.6.1",
-    "@openzeppelin/contracts": "^4.4.2",
-    "@openzeppelin/contracts-ethereum-package": "^3.0.0",
-    "readline-sync": "^1.4.10",
-    "web3": "^1.2.9"
-  },
   "scripts": {
     "ganache": "npx ganache-cli --deterministic -i 5",
     "test": "node test/index.js",
     "openchannel": "node test/openChannel.js"
+  },
+  "devDependencies": {
+    "@openzeppelin/cli": "^2.8.2",
+    "@openzeppelin/contract-loader": "^0.6.3",
+    "@openzeppelin/contracts": "^4.9.2",
+    "@openzeppelin/contracts-ethereum-package": "^3.0.0",
+    "readline-sync": "^1.4.10",
+    "web3": "^4.0.1"
   }
 }

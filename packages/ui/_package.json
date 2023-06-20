@@ -1,8 +1,8 @@
 {
-  "name": "@project/react-app",
+  "name": "ui",
   "version": "1.0.0",
   "engines": {
-    "node": "12.x"
+    "node": "18.x"
   },
   "browserslist": {
     "production": [
@@ -20,9 +20,6 @@
     "@apollo/react-hooks": "^3.1.5",
     "@rimble/connection-banner": "^1.2.3",
     "@rimble/icons": "^1.1.0",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
     "@web3-react/core": "^6.1.1",
     "@web3-react/injected-connector": "^6.0.7",
     "apollo-boost": "^0.4.7",
@@ -39,7 +36,6 @@
     "typescript": "^3.9.6"
   },
   "devDependencies": {
-    "@testing-library/dom": "^6.12.2",
     "@types/react": "^16.9.19",
     "eslint": "^6.8.0",
     "eslint-plugin-flowtype": "^4.6.0"

@@ -1,12 +1,6 @@
 {
-  "name": "@project/monorepo",
+  "name": "root",
   "version": "1.0.0",
-  "keywords": [
-    "ethereum",
-    "react",
-    "workspaces",
-    "yarn"
-  ],
   "private": true,
   "scripts": {
     "react-app:build": "yarn workspace @project/react-app build",
@@ -31,5 +25,7 @@
       "**/@graphprotocol/graph-ts/**"
     ]
   },
-  "dependencies": {}
+  "engines": {
+    "node": "18.x"
+  }
 }
