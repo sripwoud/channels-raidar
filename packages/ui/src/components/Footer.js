@@ -15,15 +15,15 @@ export const Footer = () => {
         Made by
         <Link
           fontSize='inherit'
-          href='https://twitter.com/r1oga'
+          href='https://sripwoud.xyz'
           target='__blank'
           px={2}>
-          @r1oga
+          sripwoud
         </Link>
         -
         <Link
           fontSize='inherit'
-          href='https://github.com/r1oga/channels-raidar'
+          href='https://github.com/sripwoud/channels-raidar'
           target='__blank'
           px={2}>
           GitHub
