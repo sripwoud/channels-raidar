@@ -2,7 +2,7 @@
   "name": "ui",
   "version": "1.0.0",
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
   },
   "browserslist": {
     "production": [
@@ -47,6 +47,6 @@
     "react-dom": "^16.14.0",
     "react-scripts": "^5.0.1",
     "rimble-ui": "^0.9.8",
-    "styled-components": "6.0.0-rc.3"
+    "styled-components": "6.0.0"
   }
 }

@@ -2,20 +2,6 @@
   "name": "root",
   "version": "1.0.0",
   "private": true,
-  "scripts": {
-    "react-app:build": "yarn workspace @project/react-app build",
-    "react-app:eject": "yarn workspace @project/react-app eject",
-    "react-app:start": "yarn workspace @project/react-app start",
-    "react-app:test": "yarn workspace @project/react-app test",
-    "subgraph:auth": "yarn workspace @project/subgraph auth",
-    "subgraph:codegen": "yarn workspace @project/subgraph codegen",
-    "subgraph:build": "yarn workspace @project/subgraph build",
-    "subgraph:deploy": "yarn workspace @project/subgraph deploy",
-    "deploy": "git subtree push --prefix packages/react-app heroku master",
-    "contracts:ganache": "yarn workspace @project/contracts ganache",
-    "contracts:test": "yarn workspace @project/contracts test",
-    "contracts:openchannel": "yarn workspace @project/contracts openchannel"
-  },
   "workspaces": {
     "packages": [
       "packages/*"
@@ -26,6 +12,6 @@
     ]
   },
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
   }
 }
